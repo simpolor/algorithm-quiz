@@ -1,36 +1,35 @@
-package io.simpolor.quiz.codeup;
+package io.simpolor.quiz.codeup.basic101;
 
 import java.util.Scanner;
 
-public class Q1013 {
+public class Q1015 {
 
     /***
      * ----------------------------
      * 문제 설명
      * ----------------------------
-     * 정수(integer) 두 개를 입력받아 그대로 출력해보자.
+     * 실수(float) 한 개를 입력받아 소수점 이하 3째 자리에서 반올림 하여 2째 자리까지 출력하시오.
      *
      * ----------------------------
      * 입력
      * ----------------------------
-     * 두 개의 정수가 공백으로 구분되어 입력된다.
+     * 실수 한 개가 입력된다.
      *
      * ----------------------------
      * 출력
      * ----------------------------
-     * 입력받은 두 정수를 공백으로 구분하여 그대로 출력한다.
+     * 입력한 실수를 소수점 이하 3째 자리에서 반올림 하여 2째 자리까지 출력한다.
      *
      */
     public static void main(String[] args) {
 
         // 입력 예
         Scanner in = new Scanner(System.in);
-        int input = in.nextInt();
-        int input2 = in.nextInt();
+        float input = in.nextFloat();
         in.close();
 
         // 출력 예
-        System.out.format("%d %d", input, input2);
+        System.out.format("%.2f%n", input);
 
     }
 }

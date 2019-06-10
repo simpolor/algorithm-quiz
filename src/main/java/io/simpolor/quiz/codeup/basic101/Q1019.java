@@ -1,4 +1,4 @@
-package io.simpolor.quiz.codeup;
+package io.simpolor.quiz.codeup.basic101;
 
 import java.util.Scanner;
 
@@ -27,10 +27,14 @@ public class Q1019 {
         // 입력 예
         Scanner in = new Scanner(System.in);
         String input = in.nextLine();
+        String[] strings = input.split("\\.");
         in.close();
 
         // 출력 예
-        System.out.format("%s", input);
+        String year = String.format("%04d", Integer.parseInt(strings[0]));
+        String month = String.format("%02d", Integer.parseInt(strings[1]));
+        String day = String.format("%02d", Integer.parseInt(strings[2]));
+        System.out.format("%s.%s.%s", year, month, day);
 
     }
 }

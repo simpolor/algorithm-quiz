@@ -1,19 +1,18 @@
-package io.simpolor.quiz.codeup;
+package io.simpolor.quiz.codeup.basic101;
 
-public class Q1005 {
+public class Q1006 {
 
     /***
      * ----------------------------
      * 문제 설명
      * ----------------------------
-     * 이번에는 큰 따옴표(") (Double Quotation mark)를 문장에 넣어 출력해야 한다.
+     * 이번에는 여러 가지 특수문자를 모두 출력해야 한다.
      *
-     * 다음과 같은 문장을 출력하시오.
+     * 다음과 같은 "문장"을 출력하시오.
      *
+     * "!@#$%^&*()"
      *
-     * "Hello World"
-     *
-     * (주의 : 큰 따옴표(")도 함께 출력되어야 한다.)
+     * (주의 : 특수 문자를 출력하기 위한 방법들이 약간씩 다르니 주의하도록 한다.)
      *
      * ----------------------------
      * 입력
@@ -23,10 +22,10 @@ public class Q1005 {
      * ----------------------------
      * 출력
      * ----------------------------
-     * "Hello World"
+     * "!@#$%^&*()"
      *
      */
     public static void main(String[] args){
-        System.out.println("\"Hello World\"");
+        System.out.println("\"!@#$%^&*()\"");
     }
 }

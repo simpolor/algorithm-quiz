@@ -1,18 +1,19 @@
-package io.simpolor.quiz.codeup;
+package io.simpolor.quiz.codeup.basic101;
 
-public class Q1002 {
+public class Q1005 {
 
     /***
      * ----------------------------
      * 문제 설명
      * ----------------------------
-     * 이번에는 공백이 들어있는 문장을 출력해보자.
+     * 이번에는 큰 따옴표(") (Double Quotation mark)를 문장에 넣어 출력해야 한다.
      *
-     * 다음 문장을 출력해보자.
+     * 다음과 같은 문장을 출력하시오.
      *
-     * Hello World
      *
-     * (대소문자에 주의한다.)
+     * "Hello World"
+     *
+     * (주의 : 큰 따옴표(")도 함께 출력되어야 한다.)
      *
      * ----------------------------
      * 입력
@@ -22,10 +23,10 @@ public class Q1002 {
      * ----------------------------
      * 출력
      * ----------------------------
-     * Hello World
+     * "Hello World"
      *
      */
     public static void main(String[] args){
-        System.out.println("Hello World");
+        System.out.println("\"Hello World\"");
     }
 }

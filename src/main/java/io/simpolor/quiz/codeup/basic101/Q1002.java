@@ -1,18 +1,18 @@
-package io.simpolor.quiz.codeup;
+package io.simpolor.quiz.codeup.basic101;
 
-public class Q1006 {
+public class Q1002 {
 
     /***
      * ----------------------------
      * 문제 설명
      * ----------------------------
-     * 이번에는 여러 가지 특수문자를 모두 출력해야 한다.
+     * 이번에는 공백이 들어있는 문장을 출력해보자.
      *
-     * 다음과 같은 "문장"을 출력하시오.
+     * 다음 문장을 출력해보자.
      *
-     * "!@#$%^&*()"
+     * Hello World
      *
-     * (주의 : 특수 문자를 출력하기 위한 방법들이 약간씩 다르니 주의하도록 한다.)
+     * (대소문자에 주의한다.)
      *
      * ----------------------------
      * 입력
@@ -22,10 +22,10 @@ public class Q1006 {
      * ----------------------------
      * 출력
      * ----------------------------
-     * "!@#$%^&*()"
+     * Hello World
      *
      */
     public static void main(String[] args){
-        System.out.println("\"!@#$%^&*()\"");
+        System.out.println("Hello World");
     }
 }

@@ -1,4 +1,4 @@
-package io.simpolor.quiz.codeup;
+package io.simpolor.quiz.codeup.basic101;
 
 public class Q1001 {
 
