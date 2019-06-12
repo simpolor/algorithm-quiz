@@ -49,7 +49,7 @@ public class Q1022 {
 
         StringBuffer sb = new StringBuffer();
         for(int i=0; i<ch.length; i++){
-            sb.append(input.charAt(i));
+            sb.append(ch[i]);
         }
 
         System.out.format("%s", sb.toString());

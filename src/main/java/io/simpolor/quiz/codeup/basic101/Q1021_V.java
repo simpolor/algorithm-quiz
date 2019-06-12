@@ -41,7 +41,7 @@ public class Q1021_V {
         in.close();
 
         // 출력 예
-        System.out.format("%s", input.replace("-", ""));
+        System.out.format("%s", input);
 
     }
 }
