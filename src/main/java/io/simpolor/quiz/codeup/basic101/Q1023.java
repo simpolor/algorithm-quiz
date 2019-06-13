@@ -42,12 +42,14 @@ public class Q1023 {
 
         // 입력 예
         Scanner in = new Scanner(System.in);
-        String input = in.next();
-        String[] split = input.split(":");
+        float input = in.nextFloat();
         in.close();
 
         // 출력 예
-        System.out.format("%s:%s", split[0], split[1]);
-
+        String toString = Float.toString(input);
+        String[] strings = toString.split("\\.");
+        for(String s : strings){
+            System.out.println(s);
+        }
     }
 }
