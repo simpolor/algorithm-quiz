@@ -19,6 +19,7 @@ public class Q1023 {
      * (단, 입력 값은 절댓값이 정수부가 100,000을 넘지 않으며, 소수점 이하는 0으로 시작하지 않으며, 6자리이하이다.)
      *
      * 1.414213
+     * 1232.78976
      *
      * ----------------------------
      * 출력
@@ -42,11 +43,11 @@ public class Q1023 {
 
         // 입력 예
         Scanner in = new Scanner(System.in);
-        float input = in.nextFloat();
+        double input = in.nextDouble();
         in.close();
 
         // 출력 예
-        String toString = Float.toString(input);
+        String toString = Double.toString(input);
         String[] strings = toString.split("\\.");
         for(String s : strings){
             System.out.println(s);
