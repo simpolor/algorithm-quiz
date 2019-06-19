@@ -40,14 +40,27 @@ public class Q1033 {
 
         // 출력 예
         String[] hex = new String[]{"0","1","2","3","4","5","6","7","8","9","A","B","C","D","E","F"};
-        List<Integer> bin = new ArrayList();
+        //List<Integer> bin = new ArrayList();
+        int[] bin = new int[]{};
         do {
-            bin.add(input % 16);
+            // bin.add(input % 16);
+            bin = addInt(bin, input % 16);
             input = input / 16;
         } while (input != 0);
 
-        for(int i=bin.size()-1; 0<=i; i--){
-            System.out.print(hex[bin.get(i)]);
+        for(int i=bin.length-1; 0<=i; i--){
+            System.out.print(hex[bin[i]]);
         }
+    }
+
+    public static int[] addInt(int[] nums, int addNum){
+
+        int[] newNums = new int[nums.length + 1];
+        for (int i = 0; i < nums.length; i++){
+            newNums[i] = nums[i];
+        }
+        newNums[newNums.length - 1] = addNum;
+
+        return newNums;
     }
 }
