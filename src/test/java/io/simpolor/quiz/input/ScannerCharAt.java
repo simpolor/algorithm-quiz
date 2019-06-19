@@ -1,8 +1,8 @@
-package io.simpolor.quiz.scanner;
+package io.simpolor.quiz.input;
 
 import java.util.Scanner;
 
-public class CharAt {
+public class ScannerCharAt {
 
     public static void main(String[] args) {
 

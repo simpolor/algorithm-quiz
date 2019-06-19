@@ -1,6 +1,6 @@
 package io.simpolor.quiz.codeup.basic101;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class Q1033 {
 
@@ -34,11 +34,20 @@ public class Q1033 {
     public static void main(String[] args) {
 
         // 입력 예
-        Scanner in = new Scanner(System.in);
+        Scanner in = in = new Scanner(System.in);
         int input = in.nextInt();
         in.close();
 
         // 출력 예
-        System.out.format("", "");
+        String[] hex = new String[]{"0","1","2","3","4","5","6","7","8","9","A","B","C","D","E","F"};
+        List<Integer> bin = new ArrayList();
+        do {
+            bin.add(input % 16);
+            input = input / 16;
+        } while (input != 0);
+
+        for(int i=bin.size()-1; 0<=i; i--){
+            System.out.print(hex[bin.get(i)]);
+        }
     }
 }

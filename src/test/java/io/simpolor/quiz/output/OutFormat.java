@@ -2,7 +2,7 @@ package io.simpolor.quiz.output;
 
 import org.junit.Test;
 
-public class Format {
+public class OutFormat {
 
     @Test
     public void testSystemOutFormatConversion(){

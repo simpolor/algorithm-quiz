@@ -1,4 +1,4 @@
-package io.simpolor.quiz.replace;
+package io.simpolor.quiz.sample;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
