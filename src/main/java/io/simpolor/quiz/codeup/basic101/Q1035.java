@@ -6,6 +6,15 @@ public class Q1035 {
 
     /***
      * ----------------------------
+     * printf("%o", n);
+     *
+     */
+    public static void main(String[] args) {
+
+        /*
+        // 입력 예
+        Scanner scan = new Scanner(System.in);
+        // Integer input = Integer.parseInt(scan.next(), 8);
      * 문제 설명
      * ----------------------------
      * 16진수로 입력된 정수 한 개를 8진수로 바꾸어 출력하는 프로그램을 작성해보자.
@@ -29,15 +38,6 @@ public class Q1035 {
      * ----------------------------
      * int n;
      * scanf("%x", &n); //소문자로 16진수 입력
-     * printf("%o", n);
-     *
-     */
-    public static void main(String[] args) {
-
-        /*
-        // 입력 예
-        Scanner scan = new Scanner(System.in);
-        // Integer input = Integer.parseInt(scan.next(), 8);
         int input = scan.nextInt(16);
         scan.close();
 
