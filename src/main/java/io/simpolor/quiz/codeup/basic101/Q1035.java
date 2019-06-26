@@ -43,14 +43,19 @@ public class Q1035 {
         in.close();
 
         // 출력 예
-        String[] hex = new String[]{"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"};
-        String[] changer = new String[]{"1", "2", "4", "8"};
-
+        // String[] hex = new String[]{"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"};
+        char[] hex = new char[]{'A', 'B', 'C', 'D', 'E', 'F'};
         char[] chars = replaceChars(input);
         for(int i=0; i<chars.length; i++){
+            if(48 <= (int)chars[i] && (int)chars[i] <= 57){
+                System.out.println("숫자 : "+(int)chars[i]);
+            }else if(65 <= (int)chars[i] && (int)chars[i] <= 70){
+                System.out.println("영문 : "+(int)chars[i]);
+            }
             System.out.println(chars[i]);
         }
 
+        System.out.println(">> char : 1"+((int)'A'));
        /* int[] bin = new int[]{};
         do {
             bin = addInt(bin, input % 16);
