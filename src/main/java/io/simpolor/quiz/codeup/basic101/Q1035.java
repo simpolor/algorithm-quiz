@@ -44,8 +44,8 @@ public class Q1035 {
 
         // 출력 예
         // String[] hex = new String[]{"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"};
-        char[] hex = new char[]{'A', 'B', 'C', 'D', 'E', 'F'};
-        char[] chars = replaceChars(input);
+        /*char[] hex = new char[]{'A', 'B', 'C', 'D', 'E', 'F'};
+
         for(int i=0; i<chars.length; i++){
             if(48 <= (int)chars[i] && (int)chars[i] <= 57){
                 System.out.println("숫자 : "+(int)chars[i]);
@@ -53,18 +53,25 @@ public class Q1035 {
                 System.out.println("영문 : "+(int)chars[i]);
             }
             System.out.println(chars[i]);
-        }
-
-        System.out.println(">> char : 1"+((int)'A'));
-       /* int[] bin = new int[]{};
-        do {
-            bin = addInt(bin, input % 16);
-            input = input / 16;
-        } while (input != 0);
-
-        for (int i = bin.length - 1; 0 <= i; i--) {
-            System.out.print(hex[bin[i]]);
         }*/
+
+        int gob = 1;
+        int sum = 0;
+
+        char[] chars = replaceChars(input);
+        for(int i=chars.length-1; i>=0; i--){
+
+            int plus = 0;
+            //if(){
+            //    plus = 1;
+            //}else{
+
+           // }
+            sum = sum + Character.getNumericValue(chars[i]) * gob;
+            gob = gob * 16;
+        }
+        System.out.println(sum);
+
     }
 
     public static int[] addInt(int[] nums, int addNum){
@@ -85,5 +92,6 @@ public class Q1035 {
         }
         return chars;
     }
+
 
 }
