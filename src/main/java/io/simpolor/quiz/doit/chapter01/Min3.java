@@ -2,7 +2,7 @@ package io.simpolor.quiz.doit.chapter01;
 
 import java.util.Scanner;
 
-public class Max3 {
+public class Min3 {
 
     public static void main(String[] args){
 
@@ -14,21 +14,17 @@ public class Max3 {
         System.out.print("b의 값 : "); int b = stdIn.nextInt();
         System.out.print("c의 값 : "); int c = stdIn.nextInt();
 
-        // int의 범위는 -2,147,483,648 ~ 2,147,483,647
 
-        int max = a;
-        if(b > max) max = b;
-        if(c > max) max = c;
-
-        System.out.println("최대값은 "+max+" 입니다.");
+        System.out.println("최소값은 "+min3(a, b, c)+" 입니다.");
     }
 
-    static int max(int a, int b, int c){
-        int max = a;
-        if(b > max) max = b;
-        if(c > max) max = c;
+    // 연습문제
+    static int min3(int a, int b, int c){
+        int min = a;
+        if(b < min) min = b;
+        if(c < min) min = c;
 
-        return max;
+        return min;
     }
 
 

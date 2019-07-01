@@ -2,7 +2,7 @@ package io.simpolor.quiz.doit.chapter01;
 
 import java.util.Scanner;
 
-public class Max3 {
+public class Max4 {
 
     public static void main(String[] args){
 
@@ -13,20 +13,18 @@ public class Max3 {
         System.out.print("a의 값 : "); int a = stdIn.nextInt(); // 키보드로 입력한 값 중 "정숫값"을 얻어냅니다.ㄴ
         System.out.print("b의 값 : "); int b = stdIn.nextInt();
         System.out.print("c의 값 : "); int c = stdIn.nextInt();
+        System.out.print("d의 값 : "); int d = stdIn.nextInt();
 
-        // int의 범위는 -2,147,483,648 ~ 2,147,483,647
 
-        int max = a;
-        if(b > max) max = b;
-        if(c > max) max = c;
-
-        System.out.println("최대값은 "+max+" 입니다.");
+        System.out.println("최대값은 "+max4(a, b, c, d)+" 입니다.");
     }
 
-    static int max(int a, int b, int c){
+    // 연습문제
+    static int max4(int a, int b, int c, int d){
         int max = a;
         if(b > max) max = b;
         if(c > max) max = c;
+        if(d > max) max = d;
 
         return max;
     }
