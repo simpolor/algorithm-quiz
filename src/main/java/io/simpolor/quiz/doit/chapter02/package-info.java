@@ -92,4 +92,7 @@ package io.simpolor.quiz.doit.chapter02;
  * 확장 for문은 배열 스캔을 간단하게 해결할 수 있음 ( 처음부터 읽어들임 )
  * 확장 for문을 for-in문 또는 for-each문이라고 부름
  *
+ * 클래스
+ * - 임의의 데이터형을 자유로이 조합하여 만들 수 있는 자료구조
+ *
  */
