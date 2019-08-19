@@ -58,4 +58,13 @@ package io.simpolor.quiz.doit.chapter06;
  * - 자연 정렬이 필요하지 않은 배열
  *   > static <T> void(T [] a, Comparator<? super T> c)
  *   > static <T> void(T [] a, int fromIndex, int toIndex, Comparator<? super T> c)
+ *
+ * 힙 정렬
+ * - 힙 정렬은 힙을 사용하여 정렬하는 알고리즘입니다. 힙은 '부모의 값이 자식의 값보다 항상 크다'라는 조건을 만족하는 완전이진트리입니다.
+ * - 이때 부모의 값이 자식보다 항상 작아도 힙이라고 합니다.
+ *
+ * 도수 정렬
+ * - 대소 관계를 판단하지 않고 빠르게 정렬하고 있는 알고리즘
+ * - 도수 정렬 알고리즘은 도수분포표 작성, 누적도수분포표 작성, 목적 배열만들기, 배열 복사 4단계로 이루어진다.
+ *
  */
