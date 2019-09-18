@@ -2,23 +2,41 @@ package io.simpolor.quiz.doit.chapter08;
 
 import java.util.Scanner;
 
-public class BFmactch {
+public class KMPmactch {
 
-    static int bfMatch(String txt, String pat){
-        int pt = 0; // txt 커서
+    // KMP법에 의한 문자열 검색
+    static int kmpMatch(String txt, String pat){
+        int pt = 1; // txt 커서
         int pp = 0; // pat 커서
 
+        int[] skip = new int[pat.length() + 1]; // 건너띄기 표
+
+        // 컨너뛰기 표를 만듭니다.
+        skip[pt] = 0;
+        while(pt != pat.length()){
+            if(pat.charAt(pt) == pat.charAt(pp)){
+                skip[++pt] = ++pp;
+            }else if(pp == 0){
+                skip[++pt] = pp;
+            }else{
+                pp = skip[pp];
+            }
+        }
+
+        // 검색
+        pt = pp = 0;
         while (pt != txt.length() && pp != pat.length()){
             if(txt.charAt(pt) == pat.charAt(pp)){
                 pt++;
                 pp++;
+            }else if(pp ==0){
+                pt++;
             }else{
-                pt = pt - pp + 1;
-                pp = 0;
+                pp = skip[pp];
             }
         }
 
-        if(pp == pat.length()){ // 검색 성공
+        if(pp == pat.length()){ // pt - pp를 반환합니다.
             return  pt - pp;
         }
         return -1;
@@ -33,7 +51,7 @@ public class BFmactch {
         System.out.println("패턴 : "); // 패턴용 문자
         String s2 = scanner.next();
 
-        int idx = bfMatch(s1, s2); // 문자열 s1에서 문자열 s2를 검색
+        int idx = kmpMatch(s1, s2); // 문자열 s1에서 문자열 s2를 검색
 
         if(idx == -1){
             System.out.println("텍스트에 패턴이 없습니다.");
