@@ -31,6 +31,7 @@ public class Q1013 {
 
         // 출력 예
         System.out.format("%d %d", input, input2);
+        //System.out.printf("%d %d", input, input2);
 
     }
 }
