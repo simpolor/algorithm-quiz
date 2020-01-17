@@ -80,8 +80,6 @@ public class Q1064 {
         int input3 = scanner.nextInt();
         scanner.close();
 
-        System.out.println((input1 < input2) ? input1 : input2);
-
-
+        System.out.println(input1 < input2 ? (input1 < input3 ? input1 : input3) : (input2 < input3 ? input2 : input3));
     }
 }
