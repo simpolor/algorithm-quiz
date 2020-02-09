@@ -2,7 +2,7 @@ package io.simpolor.quiz.codeup.basic101;
 
 import java.util.Scanner;
 
-public class Q1085 {
+public class Q1085_X {
 
     /***
      * ----------------------------
@@ -69,23 +69,26 @@ public class Q1085 {
         int s = scanner.nextInt(); // time
         scanner.close();
 
-        String[] unit = new String[]{"KB", "MB", "GB", "TB"};
+        String[] unit = new String[]{"", "KB", "MB", "GB", "TB"};
 
         int bit = 8;
         int cal = (h * b * c * s) / bit;
 
         int count = 0;
         int div = 1024;
+        int mok = 0;
 
-        while(true){
-            cal = cal / div;
-            if(cal < div){
-                break;
-            }
+        int result = cal / div;
+        System.out.println("result : "+result);
+
+        while(result > div){
+            mok = result % div;
+            result = result / div;
             count++;
-        }
-        float mok = cal % div;
 
-        System.out.println(cal+"/"+mok+"/"+unit[count]);
+            break;
+        }
+
+        System.out.println(result+"."+mok+" "+unit[count]);
     }
 }

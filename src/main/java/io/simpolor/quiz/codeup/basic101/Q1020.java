@@ -2,7 +2,7 @@ package io.simpolor.quiz.codeup.basic101;
 
 import java.util.Scanner;
 
-public class Q1020_V {
+public class Q1020 {
 
     /***
      * ----------------------------
