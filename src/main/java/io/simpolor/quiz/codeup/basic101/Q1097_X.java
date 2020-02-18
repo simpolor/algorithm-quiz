@@ -3,7 +3,7 @@ package io.simpolor.quiz.codeup.basic101;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class Q1097 {
+public class Q1097_X {
 
     /***
      * ----------------------------
@@ -106,15 +106,29 @@ public class Q1097 {
 
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
-        int[] num = new int[n];
+        int[] inputX = new int[n];
+        int[] inputY = new int[n];
 
         for(int i=0; i<n; i++){
-            num[i] = scanner.nextInt();
+            inputX[i] = scanner.nextInt();
+            inputY[i] = scanner.nextInt();
         }
         scanner.close();
 
-        for(int i=num.length-1; i>=0; i--){
-            System.out.printf("%d ", num[i]);
+        int[][] board = new int[19][19];
+        for(int i=0; i<n; i++){
+            for(int j=0; j<n; j++){
+                if(inputX[i] < 20 && inputY[i] < 20 ){
+                    board[inputX[i]-1][inputY[i]-1] = 1;
+                }
+            }
+        }
+
+        for(int i=0; i<19; i++){
+            for(int j=0; j<19; j++){
+                System.out.printf("%d ", board[i][j] );
+            }
+            System.out.println();
         }
 
 
