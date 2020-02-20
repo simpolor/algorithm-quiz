@@ -1,8 +1,9 @@
 package io.simpolor.quiz.codeup.basic101;
 
+import java.math.BigDecimal;
 import java.util.Scanner;
 
-public class Q1085_X {
+public class Q1085 {
 
     /***
      * ----------------------------
@@ -50,6 +51,8 @@ public class Q1085_X {
      * h는 48,000이하, b는 32이하(단, 8의배수), c는 5이하, s는 6,000이하의 자연수이다.
      *
      * 44100 16 2 10
+     * 8000 8 1 60
+     * 48000 32 5 300
      *
      * ----------------------------
      * 출력
@@ -58,37 +61,57 @@ public class Q1085_X {
      * 단, 소수점 둘째 자리에서 반올림해 첫째 자리까지 출력하고 MB를 공백을 두고 출력한다.
      *
      * 1.7 MB
+     * 0.5 MB
+     * 274.7 MB
      *
      */
     public static void main(String[] args) {
 
+
         Scanner scanner = new Scanner(System.in);
-        int h = scanner.nextInt(); // Hz
-        int b = scanner.nextInt(); // save
-        int c = scanner.nextInt(); // channel
-        int s = scanner.nextInt(); // time
+        double h = scanner.nextDouble(); // Hz
+        double b = scanner.nextDouble(); // save
+        double c = scanner.nextDouble(); // channel
+        double s = scanner.nextDouble(); // time
         scanner.close();
 
-        String[] unit = new String[]{"", "KB", "MB", "GB", "TB"};
+        /*String[] unit = new String[]{"", "KB", "MB", "GB", "TB"};
 
         int bit = 8;
         int cal = (h * b * c * s) / bit;
 
-        int count = 0;
         int div = 1024;
         int mok = 0;
+        int count = 0;
 
-        int result = cal / div;
-        System.out.println("result : "+result);
-
-        while(result > div){
-            mok = result % div;
-            result = result / div;
+        while(cal > div){
+            mok = cal % div;
+            cal = cal / div;
             count++;
-
-            break;
         }
+        double result = cal + (mok * 0.001);
+        System.out.format("%.1f %s", result, unit[count]);
+        */
 
-        System.out.println(result+"."+mok+" "+unit[count]);
+        double mb = Math.round(h * b * s * c * 10.0 / 8 / 1024 / 1024) / 10.0;
+        System.out.println(mb + " MB");
+
+        /*Scanner scanner = new Scanner(System.in);
+        BigDecimal h = scanner.nextBigDecimal(); // Hz
+        BigDecimal b = scanner.nextBigDecimal(); // save
+        BigDecimal c = scanner.nextBigDecimal(); // channel
+        BigDecimal s = scanner.nextBigDecimal(); // time
+        scanner.close();
+
+        BigDecimal d = new BigDecimal(10.0);
+        BigDecimal bit = new BigDecimal(8);
+        BigDecimal unit = new BigDecimal(1024);
+
+        BigDecimal cal = h.multiply(b).multiply(c).multiply(s).multiply(d).divide(bit);
+        BigDecimal result = cal.divide(unit).divide(unit).divide(d);
+
+        System.out.printf("%.1f MB", result);*/
+
+
     }
 }
