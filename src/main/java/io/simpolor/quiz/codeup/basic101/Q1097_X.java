@@ -72,6 +72,7 @@ public class Q1097_X {
      * 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0
      * 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0
      * 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0
+     *
      * 2
      * 10 10
      * 12 12
@@ -105,32 +106,32 @@ public class Q1097_X {
     public static void main(String[] args) throws IOException {
 
         Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt();
-        int[] inputX = new int[n];
-        int[] inputY = new int[n];
-
-        for(int i=0; i<n; i++){
-            inputX[i] = scanner.nextInt();
-            inputY[i] = scanner.nextInt();
-        }
-        scanner.close();
-
         int[][] board = new int[19][19];
-        for(int i=0; i<n; i++){
-            for(int j=0; j<n; j++){
-                if(inputX[i] < 20 && inputY[i] < 20 ){
-                    board[inputX[i]-1][inputY[i]-1] = 1;
-                }
+        for (int i = 0; i < 19; i++) {
+            for (int j = 0; j < 19; j++) {
+                board[i][j] = scanner.nextInt();
+            }
+        }
+        int stoneCnt = scanner.nextInt();
+        int stonePoint[][] = new int[stoneCnt][2];
+        for (int i = 0; i < stoneCnt; i++) {
+            stonePoint[i][0] = scanner.nextInt();
+            stonePoint[i][1] = scanner.nextInt();
+        }
+
+        for (int x = 0; x < stoneCnt; x++) {
+            for (int y = 0; y < 19; y++) {
+                board[stonePoint[x][0] - 1][y] = board[stonePoint[x][0] - 1][y] == 0 ? 1 : 0;
+                board[y][stonePoint[x][1] - 1] = board[y][stonePoint[x][1] - 1] == 0 ? 1 : 0;
             }
         }
 
-        for(int i=0; i<19; i++){
-            for(int j=0; j<19; j++){
-                System.out.printf("%d ", board[i][j] );
+        for (int i = 0; i < 19; i++) {
+            for (int j = 0; j < 19; j++) {
+                System.out.print(board[i][j] + " ");
             }
             System.out.println();
         }
-
-
     }
+
 }

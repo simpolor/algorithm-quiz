@@ -2,7 +2,7 @@ package io.simpolor.quiz.codeup.basic101;
 
 import java.util.Scanner;
 
-public class Q1086_X {
+public class Q1086 {
 
     /***
      * ----------------------------
@@ -63,32 +63,12 @@ public class Q1086_X {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        int h = scanner.nextInt(); // Hz
-        int b = scanner.nextInt(); // save
-        int c = scanner.nextInt(); // channel
-        int s = scanner.nextInt(); // time
+        double w = scanner.nextDouble(); // Hz
+        double h = scanner.nextDouble(); // Hz
+        double b = scanner.nextDouble(); // Hz
         scanner.close();
 
-        String[] unit = new String[]{"", "KB", "MB", "GB", "TB"};
-
-        int bit = 8;
-        int cal = (h * b * c * s) / bit;
-
-        int count = 0;
-        int div = 1024;
-        int mok = 0;
-
-        int result = cal / div;
-        System.out.println("result : "+result);
-
-        while(result > div){
-            mok = result % div;
-            result = result / div;
-            count++;
-
-            break;
-        }
-
-        System.out.println(result+"."+mok+" "+unit[count]);
+        double mb = Math.round(w * h * b * 100.0 / 8 / 1024 / 1024) / 100.0;
+        System.out.printf("%.2f MB", mb);
     }
 }
