@@ -1,7 +1,6 @@
 package io.simpolor.quiz.programers.hash;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /***
  * 완주하지 못한 선수
@@ -41,8 +40,8 @@ public class HASH001 {
 
     public static void main(String[] args) {
 
-        String[] participant = new String[]{"a", "b", "c"};
-        String[] completion = new String[]{"b", "c"};
+        String[] participant = new String[]{"mislav", "stanko", "mislav", "ana"};
+        String[] completion = new String[]{"stanko", "ana", "mislav"};
 
         Solution solution = new Solution();
         String result = solution.solution(participant, completion);
@@ -50,25 +49,55 @@ public class HASH001 {
         System.out.println(result);
     }
 
-}
+    public static class Solution {
 
+        public String solution(String[] participant, String[] completion) {
+            String answer = "";
+            Map<String, Integer> hm = new HashMap<String, Integer>();
+            for (String player : participant) hm.put(player, hm.getOrDefault(player, 0) + 1);
+            for (String player : completion) hm.put(player, hm.get(player) - 1);
 
-class Solution {
-    public String solution(String[] participant, String[] completion) {
-        String answer = "";
-
-        Map<String, Boolean> participantResult = new HashMap<String, Boolean>();
-        for(String p : participant){
-            for(String c : completion){
-                System.out.println(p + ", " + c + " result : "+ p.equals(c));
-                if(p.equals(c)){
-                    participantResult.put(p, true);
+            for (String key : hm.keySet()) {
+                if (hm.get(key) != 0){
+                    answer = key;
                 }
             }
-            participantResult.put(p, false);
-        }
-        System.out.println(participantResult);
 
-        return answer;
+            return answer;
+        }
     }
+
+    public static class Solution2 {
+
+        public String solution(String[] participant, String[] completion) {
+
+            Arrays.sort(participant);
+            Arrays.sort(completion);
+            for(int i=0; i<completion.length; i++){
+                if(!participant[i].equals(completion[i])) {
+                    return participant[i];
+                }
+            }
+            return participant[participant.length-1];
+        }
+    }
+
+    public static class Solution3 {
+
+        public String solution(String[] participant, String[] completion) {
+
+            Arrays.sort(participant);
+            Arrays.sort(completion);
+
+            int i;
+            for(i=0; i<participant.length-1; i++){
+                if(!participant[i].equals(completion[i])) break;
+            }
+
+            return participant[i];
+        }
+    }
+
+
+
 }
