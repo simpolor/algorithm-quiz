@@ -67,7 +67,7 @@ public class HASH001 {
         }
     }
 
-    public static class Solution2 {
+    public static class Solution1 {
 
         public String solution(String[] participant, String[] completion) {
 
@@ -82,7 +82,7 @@ public class HASH001 {
         }
     }
 
-    public static class Solution3 {
+    public static class Solution2 {
 
         public String solution(String[] participant, String[] completion) {
 

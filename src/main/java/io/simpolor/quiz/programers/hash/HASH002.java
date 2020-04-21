@@ -44,18 +44,59 @@ public class HASH002 {
 
     public static void main(String[] args) {
 
-        String[] phone_book = new String[]{"119, 97674223, 1195524421"};
+        String[] phoneBook = new String[]{"119", "97674223", "1195524421"};
 
         Solution solution = new Solution();
-        boolean result = solution.solution(phone_book);
+        boolean result = solution.solution(phoneBook);
 
         System.out.println(result);
     }
 
     public static class Solution {
 
-        public boolean solution(String[] phone_book) {
+        public boolean solution(String[] phoneBook) {
+
+            for(int i=0; i<phoneBook.length-1; i++) {
+                for(int j=i+1; j<phoneBook.length; j++) {
+                    if(phoneBook[i].startsWith(phoneBook[j])) {return false;}
+                    if(phoneBook[j].startsWith(phoneBook[i])) {return false;}
+                }
+            }
+            return true;
+        }
+    }
+
+    public static class Solution1 {
+
+        public boolean solution(String[] phoneBook) {
+
+            Arrays.sort(phoneBook);
+            boolean result = true;
+            for (int i=0; i<phoneBook.length-1; i++) {
+                if (phoneBook[i+1].contains(phoneBook[i])) {
+                    result = false;
+                    break;
+                }
+            }
+            return result;
+        }
+    }
+
+    public static class Solution2 {
+
+        public boolean solution(String[] phoneBook) {
+            Arrays.sort(phoneBook);
+
             boolean answer = true;
+            for(int i=0; i<phoneBook.length; i++){
+                for(int j=i+1; j<phoneBook.length; j++){
+                    if(phoneBook[j].contains(phoneBook[i])){
+                        System.out.println(false);
+                        return false;
+                    }
+                }
+            }
+            System.out.println(true);
             return answer;
         }
     }
