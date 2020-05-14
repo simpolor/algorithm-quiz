@@ -1,4 +1,4 @@
-package io.simpolor.quiz.programers;
+package io.simpolor.quiz.programmers;
 
 public class Q011_v {
 

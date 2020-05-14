@@ -1,4 +1,4 @@
-package io.simpolor.quiz.programers.hash;
+package io.simpolor.quiz.programmers.hash;
 
 import java.util.*;
 import java.util.stream.Collectors;

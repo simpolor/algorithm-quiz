@@ -1,4 +1,4 @@
-package io.simpolor.quiz.programers.stackAndQueue;
+package io.simpolor.quiz.programmers.stackAndQueue;
 
 import java.util.Arrays;
 import java.util.Stack;
@@ -34,7 +34,7 @@ import java.util.Stack;
  *
  *
  */
-public class STACTANDQUEUE006 {
+public class STACTANDQUEUE006_X {
 
     public static void main(String[] args) {
 

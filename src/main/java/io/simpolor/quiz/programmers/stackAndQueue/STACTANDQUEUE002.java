@@ -1,4 +1,4 @@
-package io.simpolor.quiz.programers.stackAndQueue;
+package io.simpolor.quiz.programmers.stackAndQueue;
 
 import java.util.*;
 

@@ -1,6 +1,4 @@
-package io.simpolor.quiz.programers;
-
-import java.nio.charset.Charset;
+package io.simpolor.quiz.programmers;
 
 public class Q003 {
 
