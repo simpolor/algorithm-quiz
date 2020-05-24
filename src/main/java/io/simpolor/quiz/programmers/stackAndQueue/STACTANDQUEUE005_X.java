@@ -3,6 +3,8 @@ package io.simpolor.quiz.programmers.stackAndQueue;
 import java.util.Stack;
 
 /***
+ * 쇠막대기
+ *
  * ------------------------------
  * 문제 설명
  * ------------------------------

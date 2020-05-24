@@ -3,6 +3,8 @@ package io.simpolor.quiz.programmers.inquiry;
 import java.util.*;
 
 /***
+ * 모의고사
+ *
  * ------------------------------
  * 문제 설명
  * ------------------------------

@@ -3,6 +3,8 @@ package io.simpolor.quiz.programmers.heap;
 import java.util.PriorityQueue;
 
 /***
+ * 더 맵게
+ *
  * ------------------------------
  * 문제 설명
  * ------------------------------

@@ -3,6 +3,8 @@ package io.simpolor.quiz.programmers.stackAndQueue;
 import java.util.*;
 
 /***
+ * 프린터
+ *
  * ------------------------------
  * 문제 설명
  * ------------------------------

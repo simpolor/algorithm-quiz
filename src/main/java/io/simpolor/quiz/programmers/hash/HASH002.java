@@ -3,6 +3,8 @@ package io.simpolor.quiz.programmers.hash;
 import java.util.*;
 
 /***
+ * 전화번호 목록
+ *
  * ------------------------------
  * 문제 설명
  * ------------------------------

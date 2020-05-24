@@ -5,6 +5,8 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 /***
+ * 베스트앨범
+ *
  * ------------------------------
  * 문제 설명
  * ------------------------------

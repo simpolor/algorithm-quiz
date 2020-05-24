@@ -3,6 +3,8 @@ package io.simpolor.quiz.programmers.stackAndQueue;
 import java.util.*;
 
 /***
+ * 다리를 지나는 트럭
+ *
  * ------------------------------
  * 문제 설명
  *------------------------------

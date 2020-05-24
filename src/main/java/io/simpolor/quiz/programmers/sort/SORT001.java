@@ -3,6 +3,8 @@ package io.simpolor.quiz.programmers.sort;
 import java.util.*;
 
 /***
+ * K번째수
+ *
  * ------------------------------
  * 문제 설명
  * ------------------------------
