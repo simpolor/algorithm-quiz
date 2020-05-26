@@ -1,6 +1,4 @@
-package io.simpolor.quiz.programmers.Dynamic;
-
-import io.simpolor.quiz.programmers.greedy.GREEDY001;
+package io.simpolor.quiz.programmers.dynamic;
 
 import java.util.*;
 

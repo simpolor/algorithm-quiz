@@ -1,4 +1,4 @@
-package io.simpolor.quiz.programmers.Dynamic;
+package io.simpolor.quiz.programmers.dynamic;
 
 import java.util.Arrays;
 

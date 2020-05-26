@@ -1,6 +1,4 @@
-package io.simpolor.quiz.programmers.Dynamic;
-
-import java.util.Arrays;
+package io.simpolor.quiz.programmers.dynamic;
 
 /***
  * 도둑질

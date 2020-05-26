@@ -1,8 +1,4 @@
-package io.simpolor.quiz.programmers.Dynamic;
-
-import io.simpolor.quiz.programmers.greedy.GREEDY001;
-
-import java.util.*;
+package io.simpolor.quiz.programmers.dynamic;
 
 /***
  * 타일 장식물
