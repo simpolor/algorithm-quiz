@@ -53,8 +53,8 @@ package io.simpolor.quiz.doit.chapter06;
  *
  * 클래스 객체 배열의 정렬 ( 병합 정렬 )
  * - 자연 정렬이 필요한 배열
- *   > static void sort(Object[] a)
- *   > static void sort(Object[] a, int fromIndex, int toIndex)
+ *   > static void sort_04(Object[] a)
+ *   > static void sort_04(Object[] a, int fromIndex, int toIndex)
  * - 자연 정렬이 필요하지 않은 배열
  *   > static <T> void(T [] a, Comparator<? super T> c)
  *   > static <T> void(T [] a, int fromIndex, int toIndex, Comparator<? super T> c)
