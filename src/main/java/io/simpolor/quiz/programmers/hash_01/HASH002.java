@@ -14,7 +14,9 @@ import java.util.*;
  * 구조대 : 119
  * 박준영 : 97 674 223
  * 지영석 : 11 9552 4421
- * 전화번호부에 적힌 전화번호를 담은 배열 phone_book 이 solution 함수의 매개변수로 주어질 때, 어떤 번호가 다른 번호의 접두어인 경우가 있으면 false를 그렇지 않으면 true를 return 하도록 solution 함수를 작성해주세요.
+ *
+ * 전화번호부에 적힌 전화번호를 담은 배열 phone_book 이 solution 함수의 매개변수로 주어질 때,
+ * 어떤 번호가 다른 번호의 접두어인 경우가 있으면 false를 그렇지 않으면 true를 return 하도록 solution 함수를 작성해주세요.
  *
  *------------------------------
  * 제한 사항
@@ -26,9 +28,9 @@ import java.util.*;
  * 입출력 예제
  * ------------------------------
  * phone_book	return
- * [119, 97674223, 1195524421]	false
- * [123,456,789]	true
- * [12,123,1235,567,88]	false
+ * [119, 97674223, 1195524421],	false
+ * [123, 456, 789], 	true
+ * [12, 123, 1235, 567, 88],	false
  *
  * ------------------------------
  * 입출력 예 설명
@@ -51,7 +53,9 @@ public class HASH002 {
 
     public static void main(String[] args) {
 
-        String[] phoneBook = new String[]{"119", "97674223", "1195524421"};
+        // String[] phoneBook = new String[]{"119", "97674223", "1195524421"};
+        String[] phoneBook = new String[]{"123", "456", "789"};
+        // String[] phoneBook = new String[]{"12", "123", "1235", "567", "88"};
 
         Solution solution = new Solution();
         boolean result = solution.solution(phoneBook);
@@ -63,12 +67,20 @@ public class HASH002 {
 
         public boolean solution(String[] phoneBook) {
 
-            for(int i=0; i<phoneBook.length-1; i++) {
-                for(int j=i+1; j<phoneBook.length; j++) {
-                    if(phoneBook[i].startsWith(phoneBook[j])) {return false;}
-                    if(phoneBook[j].startsWith(phoneBook[i])) {return false;}
+            for(int i=0; i<phoneBook.length; i++){
+                for(int j=0; j<phoneBook.length; j++){
+
+                    if(i == j){
+                        continue;
+                    }
+
+                    // if(phoneBook[i].contains(phoneBook[j])){
+                    if(phoneBook[i].startsWith(phoneBook[j])){
+                        return false;
+                    }
                 }
             }
+
             return true;
         }
     }
@@ -98,13 +110,25 @@ public class HASH002 {
             for(int i=0; i<phoneBook.length; i++){
                 for(int j=i+1; j<phoneBook.length; j++){
                     if(phoneBook[j].contains(phoneBook[i])){
-                        System.out.println(false);
                         return false;
                     }
                 }
             }
-            System.out.println(true);
             return answer;
+        }
+    }
+
+    public static class Solutio3 {
+
+        public boolean solution(String[] phoneBook) {
+
+            for(int i=0; i<phoneBook.length-1; i++) {
+                for(int j=i+1; j<phoneBook.length; j++) {
+                    if(phoneBook[i].startsWith(phoneBook[j])) {return false;}
+                    if(phoneBook[j].startsWith(phoneBook[i])) {return false;}
+                }
+            }
+            return true;
         }
     }
 
