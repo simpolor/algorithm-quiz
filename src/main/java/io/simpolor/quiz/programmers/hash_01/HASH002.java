@@ -18,6 +18,8 @@ import java.util.*;
  * 전화번호부에 적힌 전화번호를 담은 배열 phone_book 이 solution 함수의 매개변수로 주어질 때,
  * 어떤 번호가 다른 번호의 접두어인 경우가 있으면 false를 그렇지 않으면 true를 return 하도록 solution 함수를 작성해주세요.
  *
+ * 접두어 : 앞에 붙이는 언어 ( startWith )
+ *
  *------------------------------
  * 제한 사항
  * ------------------------------
@@ -70,11 +72,12 @@ public class HASH002 {
             for(int i=0; i<phoneBook.length; i++){
                 for(int j=0; j<phoneBook.length; j++){
 
+                    // 같은 번호는 통과
                     if(i == j){
                         continue;
                     }
 
-                    // if(phoneBook[i].contains(phoneBook[j])){
+                    //
                     if(phoneBook[i].startsWith(phoneBook[j])){
                         return false;
                     }
@@ -86,6 +89,21 @@ public class HASH002 {
     }
 
     public static class Solution1 {
+
+        public boolean solution(String[] phoneBook) {
+
+            for(int i=0; i<phoneBook.length-1; i++) {
+                for(int j=i+1; j<phoneBook.length; j++) {
+                    if(phoneBook[i].startsWith(phoneBook[j])) {return false;}
+                    if(phoneBook[j].startsWith(phoneBook[i])) {return false;}
+                }
+            }
+            return true;
+        }
+    }
+
+    // contains 의 경우 해당 문자열이 포함인지를 비교하므로, 실제 문제 내용과 조금 다르다.
+    public static class Solution2 {
 
         public boolean solution(String[] phoneBook) {
 
@@ -101,7 +119,7 @@ public class HASH002 {
         }
     }
 
-    public static class Solution2 {
+    public static class Solution3 {
 
         public boolean solution(String[] phoneBook) {
             Arrays.sort(phoneBook);
@@ -115,20 +133,6 @@ public class HASH002 {
                 }
             }
             return answer;
-        }
-    }
-
-    public static class Solutio3 {
-
-        public boolean solution(String[] phoneBook) {
-
-            for(int i=0; i<phoneBook.length-1; i++) {
-                for(int j=i+1; j<phoneBook.length; j++) {
-                    if(phoneBook[i].startsWith(phoneBook[j])) {return false;}
-                    if(phoneBook[j].startsWith(phoneBook[i])) {return false;}
-                }
-            }
-            return true;
         }
     }
 

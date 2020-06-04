@@ -4,7 +4,7 @@ import org.junit.Test;
 
 public class LoopForSubstring {
 
-
+    // 문자열을 루프로 출력
     @Test
     public void testSubstringFor(){
 

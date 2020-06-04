@@ -29,6 +29,9 @@ import java.util.*;
  * 모든 문자열의 길이는 1 이상 20 이하인 자연수이고 알파벳 소문자 또는 '_' 로만 이루어져 있습니다.
  * 스파이는 하루에 최소 한 개의 의상은 입습니다.
  *
+ *
+ * [의상의 이름, 의상의 종류] 주의
+ *
  * ------------------------------
  * 입출력 예
  * ------------------------------
@@ -47,6 +50,7 @@ import java.util.*;
  * 3. green_turban
  * 4. yellow_hat + blue_sunglasses
  * 5. green_turban + blue_sunglasses
+ *
  * 예제 #2
  * face에 해당하는 의상이 crow_mask, blue_sunglasses, smoky_makeup이므로 아래와 같이 3개의 조합이 가능합니다.
  *
@@ -63,7 +67,6 @@ public class HASH003 {
                 { "yellow_hat", "headgear" },
                 { "blue_sunglasses", "eyewear" },
                 { "green_turban", "headgear" },
-                /*{ "red_sunglasses", "eyewear" }*/
         };
 
         Solution solution = new Solution();
@@ -76,27 +79,20 @@ public class HASH003 {
 
         public int solution(String[][] clothes) {
 
-            int answer = 1;
-
-            HashMap<String, Integer> map = new HashMap();
-            for(int i=0; i<clothes.length; i++){
-                String key = clothes[i][1];
-                if(!map.containsKey(key)) {
-                    map.put(key, 1);
-                } else {
-                    map.put(key, map.get(key) + 1);
+            Map<String, List<String>> map = new HashMap();
+            for(String[] strings : clothes){
+                if(!map.containsKey(strings[1])){
+                    List<String> items = new ArrayList<>();
+                    items.add(strings[0]);
                 }
+
             }
 
-            // 경우의 수를 구하기 위한 공식 ( 여기서 +1은  의상 하나만 입었을 경우에 해당? )
-            Iterator<Integer> it = map.values().iterator();
-            while(it.hasNext()) {
-                answer *= it.next().intValue()+1;
-            }
-
-            return answer-1;
+            return 0;
         }
     }
+
+
 
     public static class Solution1 {
         public int solution(String[][] clothes) {
@@ -191,6 +187,32 @@ public class HASH003 {
             answer += keyValCount;
 
             return answer -1;
+        }
+    }
+
+    public static class Solution4 {
+
+        public int solution(String[][] clothes) {
+
+            int answer = 1;
+
+            HashMap<String, Integer> map = new HashMap();
+            for(int i=0; i<clothes.length; i++){
+                String key = clothes[i][1];
+                if(!map.containsKey(key)) {
+                    map.put(key, 1);
+                } else {
+                    map.put(key, map.get(key) + 1);
+                }
+            }
+
+            // 경우의 수를 구하기 위한 공식 ( 여기서 +1은  의상 하나만 입었을 경우에 해당? )
+            Iterator<Integer> it = map.values().iterator();
+            while(it.hasNext()) {
+                answer *= it.next().intValue()+1;
+            }
+
+            return answer-1;
         }
     }
 
