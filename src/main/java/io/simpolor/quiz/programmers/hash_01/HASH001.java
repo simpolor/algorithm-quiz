@@ -47,8 +47,14 @@ public class HASH001 {
 
     public static void main(String[] args) {
 
-        String[] participant = new String[]{"mislav", "stanko", "mislav", "ana"};
-        String[] completion = new String[]{"stanko", "ana", "mislav"};
+        /* String[] participant = new String[]{"leo", "kiki", "eden"};
+        String[] completion = new String[]{"eden", "kiki"}; */
+
+        /* String[] participant = new String[]{"mislav", "stanko", "mislav", "ana"};
+        String[] completion = new String[]{"stanko", "ana", "mislav"}; */
+
+        String[] participant = new String[]{"marina", "josipa", "nikola", "vinko", "filipa"};
+        String[] completion = new String[]{"josipa", "filipa", "marina", "marina"};
 
         Solution solution = new Solution();
         String result = solution.solution(participant, completion);

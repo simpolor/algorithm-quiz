@@ -63,4 +63,35 @@ public class MapPrintTest {
             System.out.printf("key : %s, value : %d%n", entry.getKey(), entry.getValue());
         }
     }
+
+    @Test
+    public void testValueCollection(){
+
+        Map<String, Integer> map = new HashMap();
+        map.put("김철수", 17);
+        map.put("안영미", 19);
+        map.put("나영희", 16);
+
+        Collection<Integer> values = map.values();
+
+        for(int value : values){
+            System.out.printf("value : %d%n", value);
+        }
+    }
+
+    @Test
+    public void testValueIterator(){
+
+        Map<String, Integer> map = new HashMap();
+        map.put("김철수", 17);
+        map.put("안영미", 19);
+        map.put("나영희", 16);
+
+        Iterator<Integer> iterator = map.values().iterator();
+
+        while (iterator.hasNext()){
+            int value = iterator.next();
+            System.out.printf("value : %d%n", value);
+        }
+    }
 }

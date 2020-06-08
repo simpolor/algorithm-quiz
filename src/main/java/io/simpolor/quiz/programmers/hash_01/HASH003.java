@@ -63,10 +63,15 @@ public class HASH003 {
 
     public static void main(String[] args) {
 
-        String[][] clothes = new String[][]{
+        /*String[][] clothes = new String[][]{
                 { "yellow_hat", "headgear" },
                 { "blue_sunglasses", "eyewear" },
                 { "green_turban", "headgear" },
+        };*/
+        String[][] clothes = new String[][]{
+                { "crow_mask", "face" },
+                { "blue_sunglasses", "face" },
+                { "smoky_makeup", "face" },
         };
 
         Solution solution = new Solution();
@@ -77,22 +82,27 @@ public class HASH003 {
 
     public static class Solution {
 
+        // 가짓 수는 곱하기 이므로 종류 수 + ( 모자 * 안경 ) 의 공식으로 값을 구 할 수 있음
+        // 3 + ( 1 * 2 ) = 5
         public int solution(String[][] clothes) {
 
-            Map<String, List<String>> map = new HashMap();
-            for(String[] strings : clothes){
-                if(!map.containsKey(strings[1])){
-                    List<String> items = new ArrayList<>();
-                    items.add(strings[0]);
-                }
-
+            Map<String, Integer> map = new HashMap();
+            for(String[] strings : clothes) {
+                map.put(strings[1], map.getOrDefault(strings[1], 0) + 1);
             }
 
-            return 0;
+            // 0으로 곱을 할 수 없으므로 1로 계산 후 최종 -1로 처리
+            int answer = 1;
+            int sum = 0;
+            Collection<Integer> values = map.values();
+            for (int value : values) {
+                answer *= value;
+                sum += value;
+            }
+
+            return answer + sum;
         }
     }
-
-
 
     public static class Solution1 {
         public int solution(String[][] clothes) {
