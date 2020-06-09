@@ -84,13 +84,13 @@ public class HASH003 {
     public static class Solution {
 
         // 가짓 수는 곱하기 이므로 종류 수 + ( 모자 * 안경 ) 의 공식으로 값을 구 할 수 있음
-        // 3 + ( 0 * 3 ) = 5
-        // 3 + ( 1 * 2 ) = 5
-        // 4 + ( 2 * 2 ) = 8
-        // 5 + ( 2 * 3 ) = 11
-        // 6 + ( 3 * 3 ) = 15
-        // 7 + ( 3 * 4 ) = 19
-        // 4 + ( 1 * 1 * 2 ) = 11
+        // 3 + ( 0 * 3 ) = 3 vs 1 * ( 3 + 1 ) - 1 = 3
+        // 3 + ( 1 * 2 ) = 5 vs 1 * ( 1 + 1 ) * ( 2 + 1 ) - 1
+        // 4 + ( 2 * 2 ) = 8 vs 1 * ( 2 + 1 ) * ( 2 + 1 ) - 1
+        // 5 + ( 2 * 3 ) = 11 vs 1 * ( 2 + 1 ) * ( 3 + 1 ) - 1
+        // 6 + ( 3 * 3 ) = 15 vs 1 * ( 3 + 1 ) * ( 3 + 1 ) - 1
+        // 7 + ( 3 * 4 ) = 19 vs 1 * ( 3 + 1 ) * ( 4 + 1 ) - 1
+        // 4 + ( 1 * 1 * 2 ) = 11  vs 1 * ( 1 + 1 ) * ( 1 + 1 )  * ( 1 + 2 ) - 1
         public int solution(String[][] clothes) {
 
             Map<String, Integer> map = new HashMap();
@@ -103,7 +103,6 @@ public class HASH003 {
             Collection<Integer> values = map.values();
             for (int value : values) {
                 answer *= value + 1;
-                // System.out.println(answer);
             }
 
             return answer - 1;
