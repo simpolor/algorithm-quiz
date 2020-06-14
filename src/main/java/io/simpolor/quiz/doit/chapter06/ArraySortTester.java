@@ -3,7 +3,7 @@ package io.simpolor.quiz.doit.chapter06;
 import java.util.Arrays;
 import java.util.Scanner;
 
-// Arrays.sort_04 메서드를 사용하여 정렬합니다.(퀵 정렬)
+// Arrays.sort04 메서드를 사용하여 정렬합니다.(퀵 정렬)
 public class ArraySortTester {
 
     public static void main(String[] ags){
