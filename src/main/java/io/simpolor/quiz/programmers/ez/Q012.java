@@ -1,4 +1,4 @@
-package io.simpolor.quiz.programmers.skillCheck_01;
+package io.simpolor.quiz.programmers.ez;
 
 import java.util.*;
 
@@ -39,7 +39,7 @@ import java.util.*;
  * abce와 abcd는 사전순으로 정렬하면 abcd가 우선하므로, 답은 [abcd, abce, cdx] 입니다.
  *
  */
-public class Q014 {
+public class Q012 {
 
     public static void main(String[] args) {
 

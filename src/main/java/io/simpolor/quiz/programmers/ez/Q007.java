@@ -1,7 +1,6 @@
-package io.simpolor.quiz.programmers.skillCheck_01;
+package io.simpolor.quiz.programmers.ez;
 
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.TreeMap;
 

@@ -1,4 +1,4 @@
-package io.simpolor.quiz.programmers.skillCheck_01;
+package io.simpolor.quiz.programmers.ez;
 
 /***
  * ------------------------------
@@ -30,7 +30,7 @@ package io.simpolor.quiz.programmers.skillCheck_01;
  * 3은 양의 정수의 제곱이 아니므로, -1을 리턴합니다.
  *
  */
-public class Q013 {
+public class Q011 {
 
     public static void main(String[] args) {
 
@@ -86,6 +86,20 @@ public class Q013 {
 
             return answer;
         }
+    }
+
+    public static class Solution4 {
+        public long solution(long n) {
+
+            double d = Math.sqrt(n);
+
+            if(d % 1 == 0){ // 실수 판별
+                return (long)Math.pow(d+1, 2);
+            }
+
+            return -1;
+        }
+
     }
 
 }

@@ -1,4 +1,4 @@
-package io.simpolor.quiz.programmers.skillCheck_01;
+package io.simpolor.quiz.programmers.ez;
 
 import java.util.ArrayList;
 import java.util.Arrays;

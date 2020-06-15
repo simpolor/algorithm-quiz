@@ -1,4 +1,4 @@
-package io.simpolor.quiz.programmers.skillCheck_01;
+package io.simpolor.quiz.programmers.ez;
 
 import java.util.*;
 
@@ -71,7 +71,7 @@ import java.util.*;
  * 출력	["######", "### #", "## ##", " #### ", " #####", "### # "]
  *
  */
-public class Q015 {
+public class Q013 {
 
     public static void main(String[] args) {
 

@@ -1,6 +1,6 @@
-package io.simpolor.quiz.programmers.skillCheck_01;
+package io.simpolor.quiz.programmers.level01;
 
-public class Q011 {
+public class Q001 {
 
 
     /***
@@ -15,7 +15,7 @@ public class Q011 {
      * ㅁ ㅋ ㅋ ㅁ ㅋ  ㅁ
      * ㅋ ㅋ ㅋ ㅋ ㅋ  ㅁ
      * ㅋ ㅋ ㅋ ㅋ ㅋ  ㅁ
-     * 1  2 3 4  5
+     * 1  2  3  4  5
      *
      * 게임 화면은 1 x 1 크기의 칸들로 이루어진 N x N 크기의 정사각 격자이며 위쪽에는 크레인이 있고 오른쪽에는 바구니가 있습니다. (위 그림은 5 x 5 크기의 예시입니다).
      * 각 격자 칸에는 다양한 인형이 들어 있으며 인형이 없는 칸은 빈칸입니다.
@@ -29,11 +29,17 @@ public class Q011 {
      * ㅁ ㅋ ㅋ ㅁ ㅋ  ㅋ
      * ㅁ ㅋ ㅋ ㅋ ㅋ  ㅋ
      * ㅋ ㅋ ㅋ ㅋ ㅋ  ㅋ
-     * 1  2 3 4  5
-     *
+     * 1  2  3  4  5
      *
      * 만약 같은 모양의 인형 두 개가 바구니에 연속해서 쌓이게 되면 두 인형은 터뜨려지면서 바구니에서 사라지게 됩니다.
      * 위 상태에서 이어서 [5번] 위치에서 인형을 집어 바구니에 쌓으면 같은 모양 인형 두 개가 없어집니다.
+     *
+     * ㅁ ㅁ ㅁ ㅁ ㅁ  ㅁ            ㅁ ㅁ ㅁ ㅁ ㅁ  ㅁ
+     * ㅁ ㅁ ㅁ ㅁ ㅁ  ㅋ            ㅁ ㅁ ㅁ ㅁ ㅁ  ㅁ
+     * ㅁ ㅋ ㅋ ㅁ ㅁ  ㅋ      ->    ㅁ ㅋ ㅋ ㅁ ㅁ  ㅁ
+     * ㅁ ㅋ ㅋ ㅋ ㅋ  ㅋ            ㅁ ㅋ ㅋ ㅋ ㅋ  ㅋ
+     * ㅋ ㅋ ㅋ ㅋ ㅋ  ㅋ            ㅋ ㅋ ㅋ ㅋ ㅋ  ㅋ
+     *  1  2  3  4  5                1  2  3  4  5
      *
      * 크레인 작동 시 인형이 집어지지 않는 경우는 없으나 만약 인형이 없는 곳에서 크레인을 작동시키는 경우에는 아무런 일도 일어나지 않습니다.
      * 또한 바구니는 모든 인형이 들어갈 수 있을 만큼 충분히 크다고 가정합니다. (그림에서는 화면표시 제약으로 5칸만으로 표현하였음)
@@ -55,8 +61,7 @@ public class Q011 {
      * 입출력 예
      * ------------------------------
      * board
-     * [[0,0,0,0,0],[0,0,1,0,3],[0,2,5,0,1],
-     * [4,2,4,4,2],[3,5,1,3,1]]
+     * [[0,0,0,0,0],[0,0,1,0,3],[0,2,5,0,1],[4,2,4,4,2],[3,5,1,3,1]]
      *
      * moves
      * [1,5,3,5,1,2,1,4]
@@ -76,19 +81,21 @@ public class Q011 {
      */
     public static void main(String[] args){
 
-        int n = 11;
+        int[][] board = new int[][]{{0,0,0,0,0},{0,0,1,0,3},{0,2,5,0,1},{4,2,4,4,2},{3,5,1,3,1}};
+        int[] moves = new int[]{1,5,3,5,1,2,1,4};
 
         Solution solution = new Solution();
+        int result = solution.solution(board, moves);
 
+        System.out.println(result);
     }
 
     public static class Solution {
 
         public int solution(int[][] board, int[] moves) {
 
-            int answer = 0;
-
-            return answer;
+            return 0;
         }
+
     }
 }
