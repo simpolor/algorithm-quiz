@@ -42,8 +42,9 @@ public class Q006 {
         int n = 16;
 
         Solution solution = new Solution();
+        int result = solution.solution(n);
 
-        System.out.println(solution.solution(n));
+        System.out.println(result);
     }
 
 
@@ -55,7 +56,7 @@ public class Q006 {
             long val = Long.valueOf(n);
             int count = 0;
 
-            do {
+            do{
                 if(val % 2 == 0){
                     val = val / 2;
                 }else{
@@ -67,6 +68,7 @@ public class Q006 {
                 if(count > 500){
                     return -1;
                 }
+
             }while(val != 1);
 
             return count;

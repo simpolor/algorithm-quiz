@@ -25,13 +25,13 @@ public class Q008 {
      */
     public static void main(String[] args){
 
-        int[] n = new int[]{1, 2, 3, 4};
+        // int[] n = new int[]{1, 2, 3, 4};
+        int[] n = new int[]{5, 5};
 
         Solution solution = new Solution();
+        double result = solution.solution(n);
 
-        System.out.println(solution.solution(n));
-
-
+        System.out.println(result);
     }
 
 

@@ -79,8 +79,7 @@ public class Q015 {
         int[] arr1 = new int[]{9, 20, 28, 18, 11};
         int[] arr2 = new int[]{30, 1, 21, 17, 28};
 
-        // Solution solution = new Solution();
-        Solution1 solution = new Solution1();
+        Solution solution = new Solution();
         String[] result = solution.solution(n, arr1, arr2);
 
         System.out.println(Arrays.toString(result));
