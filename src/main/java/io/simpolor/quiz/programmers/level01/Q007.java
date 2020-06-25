@@ -41,16 +41,49 @@ public class Q007 {
             String answer = "";
 
             int length = s.length();
+            int div = length / 2;
+
             if(length % 2 == 0){
-                int point = length / 2;
-                answer = s.substring(point-1, point+1);
+                answer = s.substring(div-1, div+1);
 
             }else{
-                int point = length / 2;
-                answer = s.substring(point, point+1);
+                answer = s.substring(div, div+1);
             }
 
             return answer;
+        }
+    }
+
+    public static class Solution1 {
+
+        public String solution(String s) {
+            String answer = "";
+
+            //1-1. s의 길이
+            int len = s.length();
+            char[] arr = new char[2];
+
+            //2. s의 길이 홀수
+            if(len%2==1){
+                arr[0] = s.charAt(len/2);
+                answer = String.valueOf(arr[0]);
+            }
+            //3. s의 길이 짝수
+            if(len%2==0){
+                arr[0] = s.charAt(len/2-1);
+                arr[1] = s.charAt(len/2);
+                answer = String.valueOf(arr);
+            }
+
+            return answer;
+        }
+    }
+
+    public static class Solution2 {
+
+        public String solution(String s) {
+
+            return s.substring((s.length()-1) / 2, s.length()/2 + 1);
         }
     }
 
