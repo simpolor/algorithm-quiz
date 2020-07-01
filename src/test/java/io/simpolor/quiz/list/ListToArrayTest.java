@@ -24,4 +24,21 @@ public class ListToArrayTest {
         System.out.println(Arrays.toString(array));
 
     }
+
+    @Test
+    public void testListToArray2(){
+
+        List<Integer> list = new ArrayList<>();
+        list.add(1);
+        list.add(4);
+        list.add(6);
+        list.add(2);
+        list.add(5);
+
+        Integer[] array = list.toArray(new Integer[list.size()]);
+
+        System.out.println(Arrays.toString(array));
+
+    }
+
 }
