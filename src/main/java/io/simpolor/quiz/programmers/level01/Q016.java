@@ -37,8 +37,8 @@ public class Q016 {
      */
     public static void main(String[] args){
 
-        int n = 10;
-        // int n = 5;
+        // int n = 10;
+        int n = 5;
 
         Solution solution = new Solution();
         int result = solution.solution(n);
@@ -46,19 +46,26 @@ public class Q016 {
         System.out.println(result);
     }
 
+
     public static class Solution {
         public int solution(int n) {
-            int answer = 1;
-            if(n==2) return 1;
-            for(int i=3;i<=n;i++){
-                int clear = 1;
-                for(int j=2;j<Math.sqrt(i)+1;j++){
-                    if(i%j==0){
-                        clear = 0;
+
+            int answer = 0;
+
+            boolean isPrime;
+            for(int i=2; i<=n; i++){
+
+                isPrime = true;
+                for(int j=2; j<i; j++){
+                    if(i % j == 0){
+                        isPrime = false;
                         break;
                     }
                 }
-                if(clear==1) answer++;
+
+                if(isPrime){
+                    answer++;
+                }
             }
 
             return answer;
@@ -167,22 +174,23 @@ public class Q016 {
         }
     }
 
-
-    public static class Solution8 {
+    public static class Solution6 {
         public int solution(int n) {
-
-            int answer = 0;
-
-            System.out.println(Math.sqrt(9));
-
-            for(int i=2; i<=n; i++){
-                if(i % 2 != 0){
-                    // System.out.println(i);
-                    answer++;
+            int answer = 1;
+            if(n==2) return 1;
+            for(int i=2;i<=n;i++){
+                int clear = 1;
+                for(int j=2;j<Math.sqrt(i)+1;j++){
+                    if(i%j==0){
+                        clear = 0;
+                        break;
+                    }
                 }
+                if(clear==1) answer++;
             }
 
             return answer;
         }
     }
+
 }
