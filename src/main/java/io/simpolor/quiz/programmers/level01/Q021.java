@@ -1,9 +1,5 @@
 package io.simpolor.quiz.programmers.level01;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.IntStream;
-
 public class Q021 {
 
     /***
@@ -53,19 +49,57 @@ public class Q021 {
             String answer = "";
 
             char[] chars = s.toCharArray();
-            boolean isSpace;
-
+            int count = 1;
             for(char c : chars){
                 if(c == ' '){
                     answer += " ";
-                }else if(Character.isUpperCase(c)){
-                    answer += Character.toLowerCase(c);
-                }else if(Character.isLowerCase(c)){
-                    answer += Character.toUpperCase(c);
+                    count = 1;
+                }else{
+                    if(count % 2 == 0){
+                        answer += Character.toLowerCase(c);
+                    }else {
+                        answer += Character.toUpperCase(c);
+                    }
+                    count++;
                 }
             }
 
             return answer;
+        }
+    }
+
+    public static class Solution1 {
+        public String solution(String s) {
+
+            String answer = "";
+            int cnt = 0;
+            String[] array = s.split("");
+
+            for(String ss : array) {
+                cnt = ss.contains(" ") ? 0 : cnt + 1;
+                answer += cnt%2 == 0 ? ss.toLowerCase() : ss.toUpperCase();
+            }
+            return answer;
+        }
+    }
+
+    public static class Solution2 {
+        public String solution(String s) {
+            StringBuilder sb = new StringBuilder();
+            int index = 0;
+            for (char c : s.toLowerCase().toCharArray()) {
+                if (c == ' ') {
+                    index = 0;
+                    sb.append(c);
+                    continue;
+                }
+                if (index % 2 == 0) {
+                    c += 'A' - 'a';
+                }
+                sb.append(c);
+                index++;
+            }
+            return sb.toString();
         }
     }
 
