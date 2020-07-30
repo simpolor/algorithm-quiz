@@ -1,7 +1,5 @@
 package io.simpolor.quiz.programmers.level01;
 
-import java.util.Arrays;
-
 public class Q030 {
 
     /***
@@ -62,18 +60,24 @@ public class Q030 {
     public static class Solution {
         public int solution(int num) {
 
+            long n = (long)num;
+
             int cnt = 0;
             while (true){
-                if(num == 1){
+                if(n == 1){
                     break;
                 }else {
-                    if (num % 2 == 0) {
-                        num /= 2;
+                    if (n % 2 == 0) {
+                        n /= 2;
                     } else {
-                        num = (num * 3) + 1;
+                        n = (n * 3) + 1;
                     }
                     cnt++;
                 }
+            }
+
+            if(cnt > 500){
+                return -1;
             }
 
             return cnt;
