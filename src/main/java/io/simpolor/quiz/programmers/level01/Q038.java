@@ -1,6 +1,6 @@
 package io.simpolor.quiz.programmers.level01;
 
-import java.util.Arrays;
+import java.util.*;
 
 public class Q038 {
 
@@ -84,17 +84,230 @@ public class Q038 {
 
     public static class Solution {
         public String[] solution(int n, int[] arr1, int[] arr2) {
+            String[] result = new String[n];
+            for (int i = 0; i < n; i++) {
+                result[i] = Integer.toBinaryString(arr1[i] | arr2[i]);
+            }
+
+            for (int i = 0; i < n; i++) {
+                result[i] = String.format("%" + n + "s", result[i]);
+                result[i] = result[i].replaceAll("1", "#");
+                result[i] = result[i].replaceAll("0", " ");
+            }
+
+            return result;
+        }
+    }
+
+    public static class Solution5 {
+        public String[] solution(int n, int[] arr1, int[] arr2) {
+            String[] answer = new String[arr1.length];
+            int[] temp = new int[arr1.length];
+            String[] str = new String[arr1.length];
+            for(int i = 0 ; i < arr1.length; i++){
+                temp[i] = arr1[i] | arr2[i];
+                str[i] = Integer.toBinaryString(temp[i]);
+            }
+            for(int i = 0; i < str.length; i++){
+                if(str[i].length() != n){
+                    for(int j = str[i].length(); j < n; j++){
+                        str[i] = "0" + str[i];
+                    }
+                }
+                answer[i] = str[i].replaceAll("1", "#").replaceAll("0", " ");
+            }
+            return answer;
+        }
+    }
+
+    public static class Solution7 {
+        public String[] solution(int n, int[] arr1, int[] arr2) {
+            String[] answer = new String[n];
+
+            int []temp = new int[n];
+
+            for(int i = 0 ; i < n ; i++){
+                String resultStr = "";
+                int target =1;
+                int arr = arr1[i] | arr2[i];
+                for(int j = 0 ; j < n; j++){
+                    resultStr = ((arr & target) > 0 ? "#" : " ")+resultStr;
+                    target = target << 1;
+                }
+                answer[i] = resultStr;
+            }
+
+            return answer;
+        }
+    }
+
+    public static class Solution1 {
+        public String makeSharp(int n, int m) {
+            if(n == 0) {
+                if( m > 0) {
+                    String str = "";
+                    for(int i = 0; i < m; i++) {
+                        str += " ";
+                    }
+                    return str;
+                }
+                else return "";
+            }
+            else {
+                return n % 2 == 0 ? makeSharp(n/2, m-1) + " " : makeSharp(n/2, m-1) + "#";
+            }
+        }
+        public String[] solution(int n, int [] arr1, int [] arr2) {
+            String [] answer = new String[n];
+            int [] secretMap = new int[n];
+            for(int i = 0; i < n; i++) {
+                secretMap[i] = arr1[i] | arr2[i];
+                answer[i] = makeSharp(secretMap[i], n);
+            }
+            return answer;
+        }
+    }
+
+    public static class Solution2 {
+        public String[] solution(int n, int[] arr1, int[] arr2) {
+            int[] result = new int[n];
+            String[] strResult = new String[n];
+
+            for(int i=0;i<n;i++) {
+                result[i] = arr1[i] | arr2[i];
+                strResult[i] = Integer.toBinaryString(result[i]);
+            }
+
+            System.out.println(Arrays.toString(strResult));
+
+            String s="";
+            String[] rr = new String[n];
+            for(int i=0;i<n;i++) {
+                s="";
+                for(int j=0;j<n;j++) {
+                    if(strResult[i].length()<n) {
+                        strResult[i] = "0"+strResult[i];
+                    }
+                    if(strResult[i].charAt(j)=='1')
+                        s+="#";
+                    else
+                        s+=" ";
+                }
+                rr[i] = s;
+            }
+            return rr;
+
+        }
+    }
+
+    public static class Solution3 {
+        public String[] solution(int n, int[] arr1, int[] arr2) {
             String[] answer = {};
+            String[] result = new String[n];
+            for(int i = 0; i < n; i++){
+                int value = 0;
+                int tmp1 = arr1[i];
+                int tmp2 = arr2[i];
+                boolean flag = false;
+                boolean space = true;
+                String tmpStr = "";
+                for(int j = n - 1; j >= 0; j--){
+                    if(tmp1 >= (int)Math.pow(2,j)){
+                        tmp1 -= (int)Math.pow(2,j);
+                        tmpStr += "#";
+                        flag = true;
+                        space = false;
+                    }
+                    if(tmp2 >= (int)Math.pow(2,j)){
+                        tmp2 -= (int)Math.pow(2,j);
+                        if(!flag)
+                            tmpStr += "#";
+                        space = false;
+                    }
+                    if(space){
+                        tmpStr += " ";
+                    }
+                    flag = false;
+                    space = true;
+                }
+                result[i] = tmpStr;
+            }
+            answer = result;
+            return answer;
+        }
+    }
 
-            String str = Integer.toBinaryString(9);
-            System.out.println(str);
+    public static class Solution4 {
+        public String[] solution(int n, int[] arr1, int[] arr2) {
+            int[] container = new int[n];
 
-            String str2 = Integer.toBinaryString(30);
-            System.out.println(str2);
+            for (int i = 0; i < n; i++) {
+                container[i] = arr1[i] | arr2[i];
+            }
 
-            String str3 = Integer.toBinaryString(39);
-            System.out.println(str3);
+            String[] answer = new String[n];
 
+            for (int i = 0; i < n; i++) {
+                String ans = "";
+                int remainder = container[i];
+
+                for (int j = 0; j < n; j++) {
+                    if(remainder%2 == 1) { ans = "#" + ans; }
+                    else { ans = " " + ans; }
+                    remainder = remainder/2;
+                }
+
+                answer[i] = ans;
+            }
+            return answer;
+        }
+    }
+
+    public static class Solution6 {
+        public String[] solution(int n, int[] arr1, int[] arr2) {
+            String [] arrStrAns = new String[n];
+
+            for(int i = 0; i < n; i++) {
+                String a1 = Integer.toBinaryString(arr1[i]);
+                String a2 = Integer.toBinaryString(arr2[i]);
+
+                String temp1;
+                if(a1.length() < n)
+                    temp1 = String.format("%" + n + "s", a1);
+                else
+                    temp1 = a1;
+
+                String temp2;
+                if(a2.length() < n)
+                    temp2 = String.format("%" + n + "s", a2);
+                else
+                    temp2 = a2;
+
+                temp1.replaceAll(" ", "0");
+                temp2.replaceAll(" ", "0");
+
+                String [] arrA1 = temp1.split("");
+                String [] arrA2 = temp2.split("");
+
+                String a = "";
+                for(int j = 0; j < n; j++) {
+                    a += (arrA1[j].equals("1") || arrA2[j].equals("1")) ? "1" : "0";
+                }
+
+                arrStrAns[i] = a;
+            }
+
+            String[] answer = new String[n];
+            for(int i = 0; i < n; i++) {
+                String [] a = arrStrAns[i].split("");
+
+                String ans = "";
+                for(int j = 0; j < a.length; j++) {
+                    ans += (Integer.parseInt(a[j]) == 1) ? "#" : " ";
+                }
+
+                answer[i] = ans;
+            }
 
             return answer;
         }
