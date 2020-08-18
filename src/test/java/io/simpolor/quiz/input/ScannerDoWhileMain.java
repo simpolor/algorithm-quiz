@@ -2,7 +2,7 @@ package io.simpolor.quiz.input;
 
 import java.util.Scanner;
 
-public class ScannerDoWhile {
+public class ScannerDoWhileMain {
 
     public static void main(String[] args) {
 

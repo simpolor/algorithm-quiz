@@ -18,7 +18,7 @@ public class ArrayToListTest {
     }
 
     @Test
-    public void testArrayToArrayList(){
+    public void testArrayToList1(){
 
         Integer[] strings = new Integer[]{1, 4, 6, 2, 5};
 
@@ -28,7 +28,7 @@ public class ArrayToListTest {
     }
 
     @Test
-    public void testArrayToArrayList1(){
+    public void testArrayToList2(){
 
         Integer[] strings = new Integer[]{1, 4, 6, 2, 5};
 

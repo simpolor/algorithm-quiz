@@ -2,7 +2,7 @@ package io.simpolor.quiz.array;
 
 import org.junit.Test;
 
-public class ArrayCreatTest {
+public class NewArrayTest {
 
     @Test
     public void testNewString(){

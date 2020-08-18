@@ -2,7 +2,7 @@ package io.simpolor.quiz.input;
 
 import java.util.Scanner;
 
-public class ScannerCharAt {
+public class ScannerCharAtMain {
 
     public static void main(String[] args) {
 

@@ -1,10 +1,10 @@
-package io.simpolor.quiz.array;
+package io.simpolor.quiz.list;
 
 import org.junit.Test;
 
 import java.util.*;
 
-public class ListCreatTest {
+public class NewListTest {
 
 
     @Test
