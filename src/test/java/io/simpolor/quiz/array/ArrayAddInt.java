@@ -2,7 +2,7 @@ package io.simpolor.quiz.array;
 
 import org.junit.Test;
 
-public class AddInt {
+public class ArrayAddInt {
 
     @Test
     public void testAddInt(){
