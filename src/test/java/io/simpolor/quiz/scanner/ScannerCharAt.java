@@ -1,8 +1,8 @@
-package io.simpolor.quiz.input;
+package io.simpolor.quiz.scanner;
 
 import java.util.Scanner;
 
-public class ScannerCharAtMain {
+public class ScannerCharAt {
 
     public static void main(String[] args) {
 
@@ -13,6 +13,5 @@ public class ScannerCharAtMain {
 
         // 출력 예
         System.out.format("%s", input);
-
     }
 }
