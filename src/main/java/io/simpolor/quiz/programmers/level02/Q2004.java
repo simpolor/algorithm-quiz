@@ -73,18 +73,18 @@ public class Q2004 {
 
             int answer = 0;
 
-            Queue<Integer> queue = new LinkedList<>();
-            for(int priority : priorities){
-                queue.add(priority);
+            Queue<print> queue = new LinkedList<>();
+            for(int i=0; i<priorities.length; i++){
+                queue.add(new print(i, priorities[i]));
             }
 
-            List<Integer> result = new ArrayList<>();
+            List<print> result = new ArrayList<>();
             while (!queue.isEmpty()){
-                int poll = queue.poll();
+                print poll = queue.poll();
 
                 boolean check = false;
-                for(int q : queue){
-                    if(q > poll){
+                for(print q : queue){
+                    if(q.priority > poll.priority){
                         check = true;
                         break;
                     }
@@ -97,7 +97,23 @@ public class Q2004 {
                 }
             }
 
-            return result.get(location);
+            for(print p : result){
+                if(p.index == location){
+                    return p.priority;
+                }
+            }
+
+            return 1;
+        }
+
+        class print{
+            int index;
+            int priority;
+
+            print(int index, int priority){
+                this.index = index;
+                this.priority = priority;
+            }
         }
     }
 
