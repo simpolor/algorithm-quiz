@@ -59,6 +59,9 @@ public class Q2004 {
         int[] priorities = new int[]{2, 1, 3, 2};
         int location = 2;
 
+        /*int[] priorities = new int[]{1, 1, 9, 1, 1, 1};
+        int location = 0;*/
+
         Solution solution = new Solution();
         int result = solution.solution(priorities, location);
 
@@ -70,20 +73,63 @@ public class Q2004 {
 
             int answer = 0;
 
-            Map<Integer, Integer> map = new HashMap<>();
+            Queue<Integer> queue = new LinkedList<>();
+            for(int priority : priorities){
+                queue.add(priority);
+            }
 
-            int temp;
-            int max;
-            for(int i=0; i<priorities.length; i++){
-                max = i;
-                for(int j=0; j<priorities.length; j++){
-                    if(priorities[j] > max){
-                        max = priorities[i];
+            List<Integer> result = new ArrayList<>();
+            while (!queue.isEmpty()){
+                int poll = queue.poll();
+
+                boolean check = false;
+                for(int q : queue){
+                    if(q > poll){
+                        check = true;
+                        break;
                     }
+                }
+
+                if(check){
+                    queue.add(poll);
+                }else{
+                    result.add(poll);
                 }
             }
 
+            return result.get(location);
+        }
+    }
 
+    public static class Solution1 {
+        public int solution(int[] priorities, int location) {
+            int answer = 0;
+            int l = location;
+
+            Queue<Integer> que = new LinkedList<Integer>();
+            for(int i : priorities){
+                que.add(i);
+            }
+
+            Arrays.sort(priorities);
+            int size = priorities.length-1;
+
+
+
+            while(!que.isEmpty()){
+                Integer i = que.poll();
+                if(i == priorities[size - answer]){
+                    answer++;
+                    l--;
+                    if(l <0)
+                        break;
+                }else{
+                    que.add(i);
+                    l--;
+                    if(l<0)
+                        l=que.size()-1;
+                }
+            }
 
             return answer;
         }
