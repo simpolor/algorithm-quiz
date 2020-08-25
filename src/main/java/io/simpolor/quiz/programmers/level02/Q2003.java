@@ -84,7 +84,10 @@ public class Q2003 {
                         break;
                     }
                 }
+
+                // 중복 건너띄는 작업
                 i = i + cnt - 1;
+
                 list.add(cnt);
             }
 
