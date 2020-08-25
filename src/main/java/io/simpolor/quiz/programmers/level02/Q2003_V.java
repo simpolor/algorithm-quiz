@@ -45,7 +45,7 @@ import java.util.*;
  * ※ 공지 - 2020년 7월 14일 테스트케이스가 추가되었습니다.
  *
  */
-public class Q2003 {
+public class Q2003_V {
 
     public static void main(String[] args){
 
