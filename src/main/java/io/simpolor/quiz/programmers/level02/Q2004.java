@@ -71,15 +71,19 @@ public class Q2004 {
     public static class Solution {
         public int solution(int[] priorities, int location) {
 
+            // 순서와 중요도를 저장하는 큐를 생성
             Queue<print> queue = new LinkedList<>();
             for(int i=0; i<priorities.length; i++){
                 queue.add(new print(i, priorities[i]));
             }
 
+            // 중요도 높은 순으로 가장 앞으로 가도록 정렬하여 리스트 생성
             List<print> result = new ArrayList<>();
             while (!queue.isEmpty()){
+
                 print poll = queue.poll();
 
+                // 현제 개체보다 다음 개체의 중요도를 비교
                 boolean check = false;
                 for(print q : queue){
                     if(q.priority > poll.priority){
@@ -88,6 +92,7 @@ public class Q2004 {
                     }
                 }
 
+                // 다음 개체의 중요도가 현재 개체의 중요도보다 높은 경우 현재 개체를 맨 마지막으로 이동
                 if(check){
                     queue.add(poll);
                 }else{
@@ -95,6 +100,7 @@ public class Q2004 {
                 }
             }
 
+            // 정렬된 리스트의 Print의 index와 location 같은지 비교하여 출력
             int answer = 1;
             for(print p : result){
                 if(p.index == location){
