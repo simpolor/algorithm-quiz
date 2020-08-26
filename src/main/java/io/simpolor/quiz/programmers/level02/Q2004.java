@@ -62,7 +62,7 @@ public class Q2004 {
         /*int[] priorities = new int[]{1, 1, 9, 1, 1, 1};
         int location = 0;*/
 
-        Solution solution = new Solution();
+        Solution3 solution = new Solution3();
         int result = solution.solution(priorities, location);
 
         System.out.println(result);
@@ -70,8 +70,6 @@ public class Q2004 {
 
     public static class Solution {
         public int solution(int[] priorities, int location) {
-
-            int answer = 0;
 
             Queue<print> queue = new LinkedList<>();
             for(int i=0; i<priorities.length; i++){
@@ -97,13 +95,15 @@ public class Q2004 {
                 }
             }
 
+            int answer = 1;
             for(print p : result){
                 if(p.index == location){
-                    return p.priority;
+                    break;
                 }
+                answer++;
             }
 
-            return 1;
+            return answer;
         }
 
         class print{
@@ -117,6 +117,7 @@ public class Q2004 {
         }
     }
 
+    // location을 줄이는 방법
     public static class Solution1 {
         public int solution(int[] priorities, int location) {
             int answer = 0;
@@ -146,6 +147,129 @@ public class Q2004 {
                         l=que.size()-1;
                 }
             }
+
+            return answer;
+        }
+    }
+
+    public static class Solution2 {
+        public int solution(int[] priorities, int location) {
+            List<Integer> list = new ArrayList<>();
+            for (int priority : priorities) {
+                list.add(priority);
+            }
+
+            int turn = 1;
+            while (!list.isEmpty()) {
+                final Integer j = list.get(0);
+                if (list.stream().anyMatch(v -> j < v)) {
+                    list.add(list.remove(0));
+                } else {
+                    if (location == 0) {
+                        return turn;
+                    }
+                    list.remove(0);
+                    turn++;
+                }
+
+                if (location > 0) {
+                    location--;
+                } else {
+                    location = list.size() - 1;
+                }
+            }
+
+            throw new IllegalArgumentException();
+        }
+    }
+
+    // 멋진 코드
+    public static class Solution3 {
+        public int solution(int[] priorities, int location) {
+            PriorityQueue<Integer> q = new PriorityQueue<>(Collections.reverseOrder());
+            for (int i : priorities) {
+                q.add(i);
+            }
+            int ans = 0;
+            while (!q.isEmpty()) {
+
+                for (int i = 0; i < priorities.length; i++) {
+                    if (q.peek() == priorities[i]) {
+                        q.poll();
+                        ans++;
+                        if (location == i) {
+                            q.clear();
+                            break;
+                        }
+                    }
+                }
+            }
+            return ans;
+        }
+    }
+
+    public static class Solution4 {
+        public int solution(int[] priorities, int location) {
+            int answer = 0;
+            Queue<Integer> qu = new LinkedList<Integer>();
+
+            for(int num : priorities)
+                qu.add(num);
+
+            Arrays.sort(priorities);
+            System.out.println(qu);
+            while(!qu.isEmpty()){
+                if(qu.peek() == Collections.max(qu)){
+                    qu.poll();
+                    ++answer;
+                    --location;
+                    if(location < 0)
+                        break;
+                } else{
+                    qu.add(qu.poll());
+                    location = location == 0 ? qu.size() - 1 : --location;
+                }
+            }
+            return answer;
+        }
+    }
+
+    public static class Solution5 {
+        public int solution(int[] priorities, int location) {
+            int answer = 0;
+
+            Queue<Integer> queue = new LinkedList<>();
+            ArrayList<Integer> list = new ArrayList<>();
+            for (int i = 0; i < priorities.length; i++) {
+                queue.add(priorities[i]);
+                list.add(priorities[i]);
+            }
+
+            int count = 0;
+
+            while (!queue.isEmpty()) {
+                list.sort(Collections.reverseOrder());
+                if (queue.element().equals(list.get(0))) {
+                    queue.poll();
+                    list.remove(0);
+                    location--;
+                    count++;
+                    if (location == -1) {
+                        answer = count;
+                        break;
+                    }
+                } else {
+                    int temp = queue.element();
+                    queue.poll();
+                    queue.offer(temp);
+                    location--;
+                    if (location == -1) {
+                        location = queue.size()-1;
+                    }
+                }
+
+            }
+
 
             return answer;
         }
