@@ -58,6 +58,14 @@ public class Q2005 {
         int weight = 10;
         int[] truck_weights = new int[]{7,4,5,6};
 
+        /*int bridge_length = 100;
+        int weight = 100;
+        int[] truck_weights = new int[]{10};*/
+
+        /*int bridge_length = 100;
+        int weight = 100;
+        int[] truck_weights = new int[]{10,10,10,10,10,10,10,10,10,10};*/
+
         Solution solution = new Solution();
         int result = solution.solution(bridge_length, weight, truck_weights);
 
@@ -65,39 +73,63 @@ public class Q2005 {
     }
 
     public static class Solution {
-        public int solution(int bridge_length, int weight, int[] truck_weights) {
+        public int solution(int bridgeLength, int weight, int[] truckWeights) {
 
-
-            Queue<Integer> trucks = new LinkedList<>();
-            for(int truck : truck_weights){
-                trucks.add(truck);
+            // 트럭을 큐를 넣는다.
+            Queue<Truck> moveQueue = new LinkedList<>();
+            Queue<Truck> waitQueue = new LinkedList<>();
+            for(int truck : truckWeights){
+                waitQueue.add(new Truck(truck));
             }
 
+            // 큐가 빌때까지 반복
             int second = 0;
-            int[] bridge = new int[bridge_length];
+            int sum = 0;
+            while(!waitQueue.isEmpty() || !moveQueue.isEmpty() ){
+                second++;
 
-            do{
-
-                /*int currentWeight = 0;
-                for(int b : bridge){
-                    currentWeight += b;
+                // moveQueue 가 비어있을 경우, waitQueue 의 첫번째 개체를 가지고 다리 위에 넣음
+                if(moveQueue.isEmpty()){
+                    Truck truck = waitQueue.poll();
+                    sum += truck.weight;
+                    moveQueue.add(truck);
+                    continue;
                 }
 
-                if(currentWeight >= weight){
-
-                }*/
-
-                int truck = trucks.poll();
-
-                if(bridge[0] == 0){
-                    bridge[0] = truck;
-                }else{
-
+                // moveQueue 에 대기중인 큐를 한칸씩 앞으로 이동
+                for (Truck truck : moveQueue) {
+                    truck.move();
                 }
 
-            }while(!trucks.isEmpty());
+                // 큐의 첫번째 들어온 값의 길이와 다리길이를 비교하여 제거 및 sum에 값 감소
+                if (moveQueue.peek().index > bridgeLength) {
+                    Truck truck = moveQueue.poll();
+                    sum -= truck.weight;
+                }
+
+                // waitQueue 가 비어있지 않고 sum과 waitQueue 첫번째 값의 무게가 weight 보다 작을 경우 moveQueue 로 이동
+                if (!waitQueue.isEmpty() && (sum + waitQueue.peek().weight) <= weight) {
+                    Truck truck = waitQueue.poll();
+                    sum += truck.weight;
+                    moveQueue.add(truck);
+                }
+            }
 
             return second;
+        }
+
+        class Truck{
+            int weight;
+            int index;
+
+            Truck(int weight){
+                this.weight = weight;
+                this.index = 1;
+            }
+
+            public void move(){
+                index++;
+            }
         }
     }
 
