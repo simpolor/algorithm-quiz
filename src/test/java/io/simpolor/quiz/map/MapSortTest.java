@@ -90,4 +90,29 @@ public class MapSortTest {
             System.out.printf("Key : %s, value : %s%n", entry.getKey(), entry.getValue());
         }
     }
+
+    @Test
+    public void testHashMapByStreamSorted(){
+
+        Map<String, Integer> map = new HashMap<>();
+        map.put("A", 5);
+        map.put("Z", 2);
+        map.put("C", 11);
+        map.put("G", 4);
+        map.put("E", 9);
+
+        map.entrySet().stream()
+            .sorted(Map.Entry.comparingByKey())
+            .forEach(entry -> {
+                System.out.printf("Key : %s, value : %d%n", entry.getKey(), entry.getValue());
+            });
+
+        map.entrySet().stream()
+            .sorted(Map.Entry.comparingByValue())
+            .forEach(entry -> System.out.printf("Key : %s, value : %d%n", entry.getKey(), entry.getValue()));
+
+        map.entrySet().stream()
+            .sorted(Collections.reverseOrder(Map.Entry.comparingByValue()))
+            .forEach(entry -> System.out.printf("Key : %s, value : %d%n", entry.getKey(), entry.getValue()));
+    }
 }
