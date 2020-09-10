@@ -37,7 +37,7 @@ package io.simpolor.quiz.programmers.level02;
  * 4	11
  *
  */
-public class Q2001 {
+public class Q_124나라의숫자 {
 
     public static void main(String[] args){
 

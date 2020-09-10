@@ -54,7 +54,7 @@ import java.util.Stack;
  * 3 => 다음 날이 없으므로 => 0일간 유지
  *
  */
-public class Q2002 {
+public class Q_주식가격 {
 
     public static void main(String[] args){
 
