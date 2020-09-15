@@ -1,10 +1,12 @@
-package io.simpolor.quiz.loop;
+package io.simpolor.quiz.string;
 
 import org.junit.Test;
 
-public class LoopForSubstring {
+public class StringLoopForSubstringTest {
 
-    // 문자열을 루프로 출력
+    /***
+     * 문자열을 루프로 출력
+     */
     @Test
     public void testSubstringFor(){
 
