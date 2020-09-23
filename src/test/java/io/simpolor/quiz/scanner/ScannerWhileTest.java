@@ -3,7 +3,7 @@ package io.simpolor.quiz.scanner;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class ScannerWhile {
+public class ScannerWhileTest {
 
     public static void main(String[] args) {
 

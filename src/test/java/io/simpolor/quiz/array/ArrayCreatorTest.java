@@ -7,19 +7,19 @@ import java.util.Arrays;
 public class ArrayCreatorTest {
 
     @Test
-    public void testCreator_1(){
+    public void testArrayCreator_1(){
         String[] array = new String[]{"나봉수", "라봉팔", "김형희", "하지민"};
         System.out.println("array : "+ Arrays.toString(array));
     }
 
     @Test
-    public void testCreator_2(){
+    public void testArrayCreator_2(){
         String[] array = {"나봉수", "라봉팔", "김형희", "하지민"};
         System.out.println("array : "+ Arrays.toString(array));
     }
 
     @Test
-    public void testCreator_3(){
+    public void testArrayCreator_3(){
         String[] array = new String[4];
         array[0] = "나봉수";
         array[1] = "라봉팔";

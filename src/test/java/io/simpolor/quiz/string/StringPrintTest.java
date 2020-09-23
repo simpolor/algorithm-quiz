@@ -2,13 +2,13 @@ package io.simpolor.quiz.string;
 
 import org.junit.Test;
 
-public class StringLoopForSubstringTest {
+public class StringPrintTest {
 
     /***
      * 문자열을 루프로 출력
      */
     @Test
-    public void testSubstringFor(){
+    public void testStringPrintBySubstring(){
 
         String input = "boy";
 

@@ -7,7 +7,7 @@ import java.util.Arrays;
 public class ArrayAddTest {
 
     @Test
-    public void testAdd(){
+    public void testArrayAdd(){
 
         String str = "배지민";
         String[] array = new String[]{"나봉수", "라봉팔", "김형희", "하지민"};

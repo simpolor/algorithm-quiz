@@ -14,7 +14,7 @@ import java.util.stream.Stream;
 public class ListConcatTest {
 
     @Test
-    public void testAddAll(){
+    public void testListByAddAll(){
 
         List<String> list1 = Arrays.asList("나봉수", "라봉팔");
         List<String> list2 = Arrays.asList("김형희", "하지민");
@@ -27,7 +27,7 @@ public class ListConcatTest {
     }
 
     @Test
-    public void testListUtilsByUnion(){
+    public void testListByListUtilsByUnion(){
 
         List<String> list1 = Arrays.asList("나봉수", "라봉팔");
         List<String> list2 = Arrays.asList("김형희", "하지민");
@@ -38,7 +38,7 @@ public class ListConcatTest {
     }
 
     @Test
-    public void testGuavaByIterables(){
+    public void testListByGuavaByIterables(){
 
         List<String> list1 = Arrays.asList("나봉수", "라봉팔");
         List<String> list2 = Arrays.asList("김형희", "하지민");
@@ -50,7 +50,7 @@ public class ListConcatTest {
     }
 
     @Test
-    public void testStreamByStreamConcat(){
+    public void testListByStreamByStreamConcat(){
 
         List<String> list1 = Arrays.asList("나봉수", "라봉팔");
         List<String> list2 = Arrays.asList("김형희", "하지민");

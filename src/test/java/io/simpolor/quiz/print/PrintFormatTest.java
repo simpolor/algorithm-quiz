@@ -1,11 +1,11 @@
-package io.simpolor.quiz.output;
+package io.simpolor.quiz.print;
 
 import org.junit.Test;
 
-public class OutFormat {
+public class PrintFormatTest {
 
     @Test
-    public void testSystemOutFormatConversion(){
+    public void testPrintFormatByInterger(){
 
         int input = 10;
 
@@ -19,7 +19,7 @@ public class OutFormat {
     }
 
     @Test
-    public void testSystemOutFormatString(){
+    public void testPrintFormatByString(){
 
         String input = "simpolor";
 

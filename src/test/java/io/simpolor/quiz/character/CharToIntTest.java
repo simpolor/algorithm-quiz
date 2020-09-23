@@ -1,11 +1,11 @@
-package io.simpolor.quiz.replace;
+package io.simpolor.quiz.character;
 
 import org.junit.Test;
 
-public class CharToInt {
+public class CharToIntTest {
 
     @Test
-    public void test(){
+    public void testCharToInt(){
 
         char input = 'a';
         char input2 = 'A';

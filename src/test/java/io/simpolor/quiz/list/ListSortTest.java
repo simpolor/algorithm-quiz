@@ -7,7 +7,7 @@ import java.util.*;
 public class ListSortTest {
 
     @Test
-    public void testSort(){
+    public void testListSort(){
 
         List<String> list = Arrays.asList("나봉수", "라봉팔", "김형희", "하지민");
         System.out.println("before : "+list);
@@ -17,7 +17,7 @@ public class ListSortTest {
     }
 
     @Test
-    public void testReverseSort(){
+    public void testListReverseSort(){
 
         List<String> list = Arrays.asList("나봉수", "라봉팔", "김형희", "하지민");
         System.out.println("before : "+list);

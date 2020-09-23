@@ -10,7 +10,7 @@ public class MapSortTest {
     // // https://codechacha.com/ko/java-sort-map/
 
     @Test
-    public void testLinkedHashMapSort(){
+    public void testMapSortByEntrySet(){
 
         Map<String, String> map = new LinkedHashMap<>();
         map.put("A", "5");
@@ -22,6 +22,8 @@ public class MapSortTest {
 
         List<Map.Entry<String, String>> entries = new LinkedList<>(map.entrySet());
         Collections.sort(entries, (o1, o2) -> o1.getKey().compareTo(o2.getKey()));
+        // Collections.sort(entries, Comparator.comparing(String::valueOf));
+
         LinkedHashMap<String, String> result = new LinkedHashMap<>();
         for (Map.Entry<String, String> entry : entries) {
             result.put(entry.getKey(), entry.getValue());
@@ -33,9 +35,10 @@ public class MapSortTest {
     }
 
     @Test
-    public void testTreeMapSort(){
+    public void testMapSortByTreeMapComparator(){
 
-        Comparator<String> comparator = (s1, s2)->s2.compareTo(s1);
+        // Comparator<String> comparator = (s1, s2)->s2.compareTo(s1);
+        Comparator<String> comparator = Comparator.reverseOrder();
 
         Map<String, String> map = new TreeMap<>(comparator);
         map.put("A", "5");
@@ -50,7 +53,7 @@ public class MapSortTest {
     }
 
     @Test
-    public void testHashMapToArraySort(){
+    public void testMapSortByKeySetToList(){
 
         Map<String, String> map = new HashMap<>();
         map.put("A", "5");
@@ -69,30 +72,7 @@ public class MapSortTest {
     }
 
     @Test
-    public void testHashMapToStreamSort(){
-
-        Map<String, String> map = new HashMap<>();
-        map.put("A", "5");
-        map.put("Z", "2");
-        map.put("C", "11");
-        map.put("G", "4");
-        map.put("E", "9");
-
-
-        List<Map.Entry<String, String>> entries =
-                map.entrySet().stream()
-                        .sorted(Map.Entry.comparingByKey())
-                        // .sorted(Map.Entry.comparingByValue())
-                        .collect(Collectors.toList());
-
-
-        for (Map.Entry<String, String> entry: entries) {
-            System.out.printf("Key : %s, value : %s%n", entry.getKey(), entry.getValue());
-        }
-    }
-
-    @Test
-    public void testHashMapByStreamSorted(){
+    public void testMapSortByStreamSorted(){
 
         Map<String, Integer> map = new HashMap<>();
         map.put("A", 5);

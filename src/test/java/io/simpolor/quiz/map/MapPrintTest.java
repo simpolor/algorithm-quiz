@@ -7,7 +7,7 @@ import java.util.*;
 public class MapPrintTest {
 
     @Test
-    public void testKeySet(){
+    public void testMapPrintByKeySet(){
 
         Map<String, Object> map = new HashMap();
         map.put("김철수", 17);
@@ -20,7 +20,7 @@ public class MapPrintTest {
     }
 
     @Test
-    public void testKeySetIterator(){
+    public void testMapPrintByKeySetIterator(){
 
         Map<String, Object> map = new HashMap();
         map.put("김철수", 17);
@@ -36,7 +36,7 @@ public class MapPrintTest {
     }
 
     @Test
-    public void testEntrySet(){
+    public void testMapPrintByEntrySet(){
 
         Map<String, Object> map = new HashMap();
         map.put("김철수", 17);
@@ -49,7 +49,7 @@ public class MapPrintTest {
     }
 
     @Test
-    public void testEntrySetIterator(){
+    public void testMapPrintByEntrySetIterator(){
 
         Map<String, Object> map = new HashMap();
         map.put("김철수", 17);
@@ -65,7 +65,7 @@ public class MapPrintTest {
     }
 
     @Test
-    public void testValueCollection(){
+    public void testMapPrintByValueCollection(){
 
         Map<String, Integer> map = new HashMap();
         map.put("김철수", 17);
@@ -80,7 +80,7 @@ public class MapPrintTest {
     }
 
     @Test
-    public void testValueIterator(){
+    public void testMapPrintByValueIterator(){
 
         Map<String, Integer> map = new HashMap();
         map.put("김철수", 17);
@@ -96,7 +96,7 @@ public class MapPrintTest {
     }
 
     @Test
-    public void testForEach(){
+    public void testMapPrintByForEach(){
 
         Map<String, Integer> map = new HashMap();
         map.put("김철수", 17);
@@ -107,7 +107,7 @@ public class MapPrintTest {
     }
 
     @Test
-    public void testForEachByEntrySet(){
+    public void testMapPrintByForEachByEntrySet(){
 
         Map<String, Integer> map = new HashMap();
         map.put("김철수", 17);
@@ -119,7 +119,7 @@ public class MapPrintTest {
     }
 
     @Test
-    public void testForEachByKeySetAndValue(){
+    public void testMapPrintByForEachByKeySetAndValue(){
 
         Map<String, Integer> map = new HashMap();
         map.put("김철수", 17);

@@ -8,7 +8,7 @@ import java.util.Comparator;
 public class ArraySortTest {
 
     @Test
-    public void testSort(){
+    public void testArraySort(){
         String[] array = new String[]{"나봉수", "라봉팔", "김형희", "하지민"};
         System.out.println("before : "+Arrays.toString(array));
 
@@ -17,7 +17,7 @@ public class ArraySortTest {
     }
 
     @Test
-    public void testReverseSort(){
+    public void testArrayReverseSort(){
         String[] array = new String[]{"나봉수", "라봉팔", "김형희", "하지민"};
         System.out.println("before : "+Arrays.toString(array));
 

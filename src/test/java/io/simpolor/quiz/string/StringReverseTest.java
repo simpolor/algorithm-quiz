@@ -5,7 +5,7 @@ import org.junit.Test;
 public class StringReverseTest {
 
     @Test
-    public void testReverse(){
+    public void testStringReverse(){
 
         String input = "simpolor";
         char[] array = input.toCharArray();

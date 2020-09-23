@@ -3,7 +3,7 @@ package io.simpolor.quiz.scanner;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class ScannerDoWhile {
+public class ScannerDoWhileTest {
 
     public static void main(String[] args) {
 

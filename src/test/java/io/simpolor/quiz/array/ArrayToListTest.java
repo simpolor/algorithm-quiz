@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 public class ArrayToListTest {
 
     @Test
-    public void testToListByArrayAsList(){
+    public void testArrayToListByAsList(){
 
         String[] array = new String[]{"나봉수", "라봉팔", "김형희", "하지민"};
         System.out.println("before : "+Arrays.toString(array));
@@ -18,7 +18,7 @@ public class ArrayToListTest {
     }
 
     @Test
-    public void testToListByArrayList(){
+    public void testArrayToListByArrayList(){
 
         String[] array = new String[]{"나봉수", "라봉팔", "김형희", "하지민"};
         System.out.println("before : "+Arrays.toString(array));
@@ -28,7 +28,7 @@ public class ArrayToListTest {
     }
 
     @Test
-    public void testToListByArrayStream(){
+    public void testArrayToListByArrayStream(){
 
         String[] array = new String[]{"나봉수", "라봉팔", "김형희", "하지민"};
         System.out.println("before : "+Arrays.toString(array));

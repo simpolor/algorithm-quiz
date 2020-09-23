@@ -7,7 +7,7 @@ import java.util.*;
 public class ListToArrayTest {
 
     @Test
-    public void testToArray_1(){
+    public void testListToArray(){
 
         List<String> list = Arrays.asList("나봉수", "라봉팔", "김형희", "하지민");
         System.out.println("before : "+list);
@@ -21,7 +21,7 @@ public class ListToArrayTest {
     }
 
     @Test
-    public void testToArray_2(){
+    public void testListToArrayByListToArray(){
 
         List<String> list = Arrays.asList("나봉수", "라봉팔", "김형희", "하지민");
         System.out.println("before : "+list);
