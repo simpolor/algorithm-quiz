@@ -2,10 +2,10 @@ package io.simpolor.quiz.programmers.level01;
 
 import java.util.*;
 
-public class Q1011 {
+public class Q_문자열_내_마음대로_정렬하기 {
 
     /***
-     * 문자열 내 마음대로 정렬하기
+     * 문자열 내 마음대로 정렬하기 ( 연습문제 )
      *
      * ------------------------------
      * 문제 설명

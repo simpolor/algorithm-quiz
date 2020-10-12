@@ -2,7 +2,7 @@ package io.simpolor.quiz.programmers.level01;
 
 import java.util.*;
 
-public class Q1005 {
+public class Q_K번째수 {
 
     /***
      * K번째수 ( 정렬 )

@@ -3,7 +3,7 @@ package io.simpolor.quiz.programmers.level01;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Q1002 {
+public class Q_완주하지_못한_선수 {
 
     /***
      * 완주하지 못한 선수 ( 해시 )

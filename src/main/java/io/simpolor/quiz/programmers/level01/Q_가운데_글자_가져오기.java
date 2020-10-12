@@ -1,9 +1,9 @@
 package io.simpolor.quiz.programmers.level01;
 
-public class Q1007 {
+public class Q_가운데_글자_가져오기 {
 
     /***
-     * 가운데 글자 가져오기
+     * 가운데 글자 가져오기 ( 연습문제 )
      *
      * ------------------------------
      * 문제 설명

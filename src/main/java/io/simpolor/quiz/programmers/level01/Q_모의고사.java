@@ -2,10 +2,10 @@ package io.simpolor.quiz.programmers.level01;
 
 import java.util.*;
 
-public class Q1003 {
+public class Q_모의고사 {
 
     /***
-     * 모의고사 ( 완전 탐색 )
+     * 모의고사 ( 완전탐색 )
      *
      * ------------------------------
      * 문제 설명

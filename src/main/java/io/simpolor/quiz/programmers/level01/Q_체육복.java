@@ -3,10 +3,10 @@ package io.simpolor.quiz.programmers.level01;
 import java.util.Arrays;
 import java.util.HashSet;
 
-public class Q1004 {
+public class Q_체육복 {
 
     /***
-     * 체육복 ( Greedy )
+     * 체육복 ( 탐욕법 )
      *
      * ------------------------------
      * 문제 설명

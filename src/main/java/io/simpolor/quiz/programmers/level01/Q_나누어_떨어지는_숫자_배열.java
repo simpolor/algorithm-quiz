@@ -2,7 +2,7 @@ package io.simpolor.quiz.programmers.level01;
 
 import java.util.*;
 
-public class Q1009 {
+public class Q_나누어_떨어지는_숫자_배열 {
 
     /***
      * 나누어 떨어지는 숫자 배열

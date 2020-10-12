@@ -2,10 +2,10 @@ package io.simpolor.quiz.programmers.level01;
 
 import java.time.LocalDate;
 
-public class Q1006 {
+public class Q_2016년 {
 
     /***
-     * 2016
+     * 2016 ( 연습문제 )
      *
      * ------------------------------
      * 문제 설명

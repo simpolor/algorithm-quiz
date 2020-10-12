@@ -2,10 +2,10 @@ package io.simpolor.quiz.programmers.level01;
 
 import java.util.*;
 
-public class Q1008 {
+public class Q_같은_숫자는_싫어 {
 
     /***
-     * 같은 숫자는 싫어
+     * 같은 숫자는 싫어 ( 연습문제 )
      *
      * ------------------------------
      * 문제 설명

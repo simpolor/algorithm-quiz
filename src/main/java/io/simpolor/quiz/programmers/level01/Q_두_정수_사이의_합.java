@@ -1,9 +1,9 @@
 package io.simpolor.quiz.programmers.level01;
 
-public class Q1010 {
+public class Q_두_정수_사이의_합 {
 
     /***
-     * 두 정수 사이의 합
+     * 두 정수 사이의 합 ( 연습문제 )
      *
      * ------------------------------
      * 문제 설명
