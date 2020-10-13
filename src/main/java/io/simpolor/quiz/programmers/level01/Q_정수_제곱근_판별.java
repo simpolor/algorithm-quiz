@@ -1,9 +1,9 @@
 package io.simpolor.quiz.programmers.level01;
 
-public class Q1025 {
+public class Q_정수_제곱근_판별 {
 
     /***
-     * 정수 제곱근 판별
+     * 정수 제곱근 판별 ( 연습문제 )
      *
      * ------------------------------
      * 문제 설명

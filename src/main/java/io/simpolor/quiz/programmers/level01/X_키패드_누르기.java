@@ -2,10 +2,10 @@ package io.simpolor.quiz.programmers.level01;
 
 import java.util.*;
 
-public class Q1028_V {
+public class X_키패드_누르기 {
 
     /***
-     * [카카오 인턴] 키패드 누르기
+     * 키패드 누르기 ( 카카오 인턴쉽 )
      *
      * ------------------------------
      * 문제 설명

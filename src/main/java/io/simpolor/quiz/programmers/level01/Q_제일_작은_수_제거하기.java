@@ -2,10 +2,10 @@ package io.simpolor.quiz.programmers.level01;
 
 import java.util.*;
 
-public class Q1026 {
+public class Q_제일_작은_수_제거하기 {
 
     /***
-     * 제일 작은 수 제거하기
+     * 제일 작은 수 제거하기 ( 연습문제 )
      *
      * ------------------------------
      * 문제 설명
@@ -30,8 +30,8 @@ public class Q1026 {
      */
     public static void main(String[] args){
 
-        // int[] arr = new int[]{4, 3, 2, 1};
-        int[] arr = new int[]{10};
+        int[] arr = new int[]{4, 3, 2, 1};
+        // int[] arr = new int[]{10};
 
         Solution solution = new Solution();
         int[] result = solution.solution(arr);
@@ -45,18 +45,19 @@ public class Q1026 {
             if(arr.length > 1){
                 int[] answer = new int[arr.length-1];
 
-                Arrays.sort(arr);
-
-                int cnt = 0;
-                int[] reverse = new int[arr.length];
-
-                for(int i=arr.length-1; 0<i; i--){
-                    reverse[cnt] = arr[i];
-                    cnt++;
+                int min = arr[0];
+                for(int i=1; i<arr.length; i++){
+                    if(arr[i] < min){
+                        min = arr[i];
+                    }
                 }
 
-                for(int i=0; i<reverse.length-1; i++){
-                    answer[i] = reverse[i];
+                int idx = 0;
+                for (int i = 0; i < arr.length; i++) {
+                    if(arr[i] != min) {
+                        answer[idx] = arr[i];
+                        idx++;
+                    }
                 }
 
                 return answer;

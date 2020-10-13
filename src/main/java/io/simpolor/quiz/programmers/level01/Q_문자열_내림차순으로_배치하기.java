@@ -4,10 +4,10 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class Q1013 {
+public class Q_문자열_내림차순으로_배치하기 {
 
     /***
-     * 문자열 내림차순으로 배치하기
+     * 문자열 내림차순으로 배치하기 ( 연습문제 )
      *
      * ------------------------------
      * 문제 설명

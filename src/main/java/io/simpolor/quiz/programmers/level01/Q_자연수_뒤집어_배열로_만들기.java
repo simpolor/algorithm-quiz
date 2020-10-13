@@ -2,10 +2,10 @@ package io.simpolor.quiz.programmers.level01;
 
 import java.util.*;
 
-public class Q1023 {
+public class Q_자연수_뒤집어_배열로_만들기 {
 
     /***
-     * 자연수 뒤집어 배열로 만들기
+     * 자연수 뒤집어 배열로 만들기 ( 연습문제 )
      *
      * ------------------------------
      * 문제 설명
@@ -37,14 +37,16 @@ public class Q1023 {
 
     public static class Solution {
         public int[] solution(long n) {
-            String a = "" + n;
-            int[] answer = new int[a.length()];
-            int cnt=0;
 
-            while(n>0) {
-                answer[cnt] = (int)(n % 10);
+            int length =  String.valueOf(n).length();
+
+            int[] answer = new int[length];
+
+            int index = 0;
+            while(n > 0) {
+                answer[index] = (int)(n % 10);
                 n /= 10;
-                cnt++;
+                index++;
             }
             return answer;
         }

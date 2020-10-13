@@ -2,10 +2,10 @@ package io.simpolor.quiz.programmers.level01;
 
 import java.util.Arrays;
 
-public class Q1031 {
+public class Q_평균_구하기 {
 
     /***
-     * 평균 구하기
+     * 평균 구하기 ( 연습문제 )
      *
      * ------------------------------
      * 문제 설명

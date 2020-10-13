@@ -1,9 +1,9 @@
 package io.simpolor.quiz.programmers.level01;
 
-public class Q1032 {
+public class Q_하샤드_수 {
 
     /***
-     * 하샤드 수
+     * 하샤드 수 ( 연습문제 )
      *
      * ------------------------------
      * 문제 설명

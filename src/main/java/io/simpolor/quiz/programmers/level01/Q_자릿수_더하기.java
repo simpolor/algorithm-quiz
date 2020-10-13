@@ -1,9 +1,9 @@
 package io.simpolor.quiz.programmers.level01;
 
-public class Q1022 {
+public class Q_자릿수_더하기 {
 
     /***
-     * 자릿수 더하기
+     * 자릿수 더하기 ( 연습문제 )
      *
      * ------------------------------
      * 문제 설명

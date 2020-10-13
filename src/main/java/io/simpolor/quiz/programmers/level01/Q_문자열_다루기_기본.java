@@ -2,10 +2,10 @@ package io.simpolor.quiz.programmers.level01;
 
 import java.util.regex.Pattern;
 
-public class Q1014 {
+public class Q_문자열_다루기_기본 {
 
     /***
-     * 문자열 다루기 기본
+     * 문자열 다루기 기본 ( 연습문제 )
      *
      * ------------------------------
      * 문제 설명

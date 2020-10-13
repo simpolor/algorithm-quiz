@@ -1,9 +1,9 @@
 package io.simpolor.quiz.programmers.level01;
 
-public class Q1017 {
+public class Q_수박수박수박수박수박수 {
 
     /***
-     * 수박수박수박수박수박수?
+     * 수박수박수박수박수박수? ( 연습문제 )
      *
      * ------------------------------
      * 문제 설명

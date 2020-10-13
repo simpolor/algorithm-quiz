@@ -1,6 +1,6 @@
 package io.simpolor.quiz.programmers.level01;
 
-public class Q1018 {
+public class Q_문자열을_정수로_바꾸기 {
 
     /***
      * 문자열을 정수로 바꾸기

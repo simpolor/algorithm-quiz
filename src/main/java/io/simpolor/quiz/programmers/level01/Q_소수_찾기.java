@@ -1,9 +1,9 @@
 package io.simpolor.quiz.programmers.level01;
 
-public class Q1016 {
+public class Q_소수_찾기 {
 
     /***
-     * 소수 찾기
+     * 소수 찾기 ( 연습문제 )
      *
      * ------------------------------
      * 문제 설명
@@ -51,11 +51,12 @@ public class Q1016 {
         public int solution(int n) {
 
             int answer = 0;
-
             boolean isPrime;
+
             for(int i=2; i<=n; i++){
 
                 isPrime = true;
+
                 for(int j=2; j<i; j++){
                     if(i % j == 0){
                         isPrime = false;

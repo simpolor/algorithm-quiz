@@ -1,9 +1,9 @@
 package io.simpolor.quiz.programmers.level01;
 
-public class Q1019 {
+public class Q_시저_암호 {
 
     /***
-     * 시저 암호
+     * 시저 암호 ( 연습문제 )
      *
      * ------------------------------
      * 문제 설명

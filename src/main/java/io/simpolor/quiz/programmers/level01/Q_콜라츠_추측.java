@@ -1,9 +1,9 @@
 package io.simpolor.quiz.programmers.level01;
 
-public class Q1030 {
+public class Q_콜라츠_추측 {
 
     /***
-     * 콜라츠 추측
+     * 콜라츠 추측 ( 연습문제 )
      *
      * ------------------------------
      * 문제 설명

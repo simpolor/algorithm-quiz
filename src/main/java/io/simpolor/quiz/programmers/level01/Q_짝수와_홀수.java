@@ -1,9 +1,9 @@
 package io.simpolor.quiz.programmers.level01;
 
-public class Q1027 {
+public class Q_짝수와_홀수 {
 
     /***
-     * 짝수와 홀수
+     * 짝수와 홀수 ( 연습문제 )
      *
      * ------------------------------
      * 문제 설명

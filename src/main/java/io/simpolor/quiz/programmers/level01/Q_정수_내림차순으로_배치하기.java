@@ -2,10 +2,10 @@ package io.simpolor.quiz.programmers.level01;
 
 import java.util.*;
 
-public class Q1024 {
+public class Q_정수_내림차순으로_배치하기 {
 
     /***
-     * 정수 내림차순으로 배치하기
+     * 정수 내림차순으로 배치하기 ( 연습문제 )
      *
      * ------------------------------
      * 문제 설명
@@ -28,7 +28,7 @@ public class Q1024 {
      */
     public static void main(String[] args){
 
-        long n = 873211;
+        long n = 118372;
 
         Solution solution = new Solution();
         long result = solution.solution(n);
@@ -43,13 +43,12 @@ public class Q1024 {
 
             Arrays.sort(chars);
 
-            System.out.println(chars);
-            String s = "";
+            StringBuilder sb = new StringBuilder();
             for(int i=chars.length-1; 0<=i; i--){
-                s += chars[i];
+                sb.append(chars[i]);
             }
 
-            return Long.valueOf(s);
+            return Long.valueOf(sb.toString());
         }
     }
 

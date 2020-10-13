@@ -1,9 +1,9 @@
 package io.simpolor.quiz.programmers.level01;
 
-public class Q1012 {
+public class Q_문자열_내_p와_y의_개수 {
 
     /***
-     * 문자열 내 p와 y의 개수
+     * 문자열 내 p와 y의 개수 ( 연습문제 )
      *
      * ------------------------------
      * 문제 설명
@@ -42,7 +42,8 @@ public class Q1012 {
     public static void main(String[] args){
 
         // String s = "pPoooyY";
-        String s = "Pyy";
+        // String s = "Pyy";
+        String s = "ssss";
 
         Solution solution = new Solution();
         boolean result = solution.solution(s);
@@ -66,7 +67,7 @@ public class Q1012 {
                 }
             }
 
-            if(p != 0 && p == y){
+            if(p == 0 || p == y){
                 return true;
             }
 

@@ -2,10 +2,10 @@ package io.simpolor.quiz.programmers.level01;
 
 import java.util.Arrays;
 
-public class Q1029 {
+public class Q_최대공약수와_최소공배수 {
 
     /***
-     * 최대공약수와 최소공배수
+     * 최대공약수와 최소공배수 ( 연습문제 )
      *
      * ------------------------------
      * 문제 설명

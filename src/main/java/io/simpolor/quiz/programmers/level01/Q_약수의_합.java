@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.IntStream;
 
-public class Q1020 {
+public class Q_약수의_합 {
 
     /***
-     * 약수의 합
+     * 약수의 합 ( 연습문제 )
      *
      * ------------------------------
      * 문제 설명

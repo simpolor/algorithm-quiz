@@ -3,10 +3,10 @@ package io.simpolor.quiz.programmers.level01;
 import java.util.Arrays;
 import java.util.regex.Pattern;
 
-public class Q1015 {
+public class Q_서울에서_김서방_찾기 {
 
     /***
-     * 서울에서 김서방 찾기
+     * 서울에서 김서방 찾기 ( 연습문제 )
      *
      * ------------------------------
      * 문제 설명

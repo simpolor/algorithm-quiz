@@ -1,9 +1,9 @@
 package io.simpolor.quiz.programmers.level01;
 
-public class Q1021 {
+public class Q_이상한_문자_만들기 {
 
     /***
-     * 이상한 문자 만들기
+     * 이상한 문자 만들기 ( 연습문제 )
      *
      * ------------------------------
      * 문제 설명
@@ -46,25 +46,26 @@ public class Q1021 {
     public static class Solution {
         public String solution(String s) {
 
-            String answer = "";
-
             char[] chars = s.toCharArray();
+
+            StringBuilder sb = new StringBuilder();
+
             int count = 1;
             for(char c : chars){
-                if(c == ' '){
-                    answer += " ";
+                if(c == 32){
+                    sb.append(" ");
                     count = 1;
                 }else{
                     if(count % 2 == 0){
-                        answer += Character.toLowerCase(c);
+                        sb.append(Character.toLowerCase(c));
                     }else {
-                        answer += Character.toUpperCase(c);
+                        sb.append(Character.toUpperCase(c));
                     }
                     count++;
                 }
             }
 
-            return answer;
+            return sb.toString();
         }
     }
 
