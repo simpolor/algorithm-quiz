@@ -24,7 +24,7 @@ public class ScannerWhileTest {
         scanner.close();
 
 
-        System.out.println("input : "+input);
+        System.out.println("입력한 수 : "+input);
     }
 
 }

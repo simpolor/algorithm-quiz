@@ -4,18 +4,19 @@ import org.junit.Test;
 
 public class StringMethodTest {
 
-    /***
-     * B 문자열이 A 문자열로 시작하는지 여부 확인 메소드
-     */
     @Test
-    public void testStringMethodByStartWith(){
+    public void testStartWith(){
 
-        String a = "12";
-        String b = "1234567";
+        String a = "1234567";
+        String b = "12";
 
-        System.out.println(a.startsWith(b));
-        System.out.println(b.startsWith(a));
+        // b 문자열이 a 문자열의 시작점에 포함되는지 여부
+        System.out.println("result : "+a.startsWith(b));
 
+        String c = "34";
+
+        // c 문자열이 a 문자열의 시작점에 포함되는지 여부
+        System.out.println("result : "+a.startsWith(c));
 
     }
 }

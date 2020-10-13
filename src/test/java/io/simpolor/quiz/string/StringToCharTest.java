@@ -2,17 +2,17 @@ package io.simpolor.quiz.string;
 
 import org.junit.Test;
 
+import java.util.Arrays;
+
 public class StringToCharTest {
 
     @Test
     public void testToCharArray(){
 
         String input = "boy";
-        char[] ouput = input.toCharArray();
+        char[] output = input.toCharArray();
 
-        for(char c : ouput){
-            System.out.format("'%s'%n", c);
-        }
+        System.out.println("result : "+ Arrays.toString(output));
     }
 
     @Test
@@ -25,8 +25,6 @@ public class StringToCharTest {
             output[i] = input.charAt(i);
         }
 
-        for(int i=0; i<input.length(); i++){
-            output[i] = input.charAt(i);
-        }
+        System.out.println("result : "+Arrays.toString(output));
     }
 }
