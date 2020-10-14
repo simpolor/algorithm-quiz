@@ -2,10 +2,10 @@ package io.simpolor.quiz.programmers.level01;
 
 import java.util.Arrays;
 
-public class Q1035 {
+public class Q_x만큼_간격이_있는_n개의_숫자 {
 
     /***
-     * x만큼 간격이 있는 n개의 숫자
+     * x만큼 간격이 있는 n개의 숫자 ( 연습문제 )
      *
      * ------------------------------
      * 문제 설명

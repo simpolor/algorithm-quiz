@@ -1,12 +1,11 @@
 package io.simpolor.quiz.programmers.level01;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
-public class Q1036 {
+public class Q_직사각형_별찍기 {
 
     /***
-     * 직사각형 별찍기
+     * 직사각형 별찍기 ( 연습문제 )
      *
      * ------------------------------
      * 문제 설명

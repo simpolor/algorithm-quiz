@@ -2,10 +2,10 @@ package io.simpolor.quiz.programmers.level01;
 
 import java.util.*;
 
-public class Q1039_V {
+public class X_실패율 {
 
     /***
-     * 실패율
+     * 실패율 ( 2019 KAKAO BLIND RECRUITMENT )
      *
      * ------------------------------
      * 문제 설명

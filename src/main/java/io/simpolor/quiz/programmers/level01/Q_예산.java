@@ -2,10 +2,10 @@ package io.simpolor.quiz.programmers.level01;
 
 import java.util.Arrays;
 
-public class Q1037 {
+public class Q_예산 {
 
     /***
-     * 예산
+     * 예산 ( Summer/Winter Coding(~2018) )
      *
      * ------------------------------
      * 문제 설명
@@ -55,11 +55,11 @@ public class Q1037 {
      */
     public static void main(String[] args){
 
-        /*int[] d = new int[]{1,3,2,5,4};
-        int budget = 9;*/
+        int[] d = new int[]{1,3,2,5,4};
+        int budget = 9;
 
-        int[] d = new int[]{2,2,3,3};
-        int budget = 10;
+        /*int[] d = new int[]{2,2,3,3};
+        int budget = 10;*/
 
         Solution solution = new Solution();
         int result = solution.solution(d, budget);

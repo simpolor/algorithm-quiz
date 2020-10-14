@@ -2,10 +2,10 @@ package io.simpolor.quiz.programmers.level01;
 
 import java.util.Arrays;
 
-public class Q1033 {
+public class Q_핸드폰_번호_가리기 {
 
     /***
-     * 핸드폰 번호 가리기
+     * 핸드폰 번호 가리기 ( 연습문제 )
      *
      * ------------------------------
      * 문제 설명

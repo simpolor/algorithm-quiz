@@ -1,11 +1,9 @@
 package io.simpolor.quiz.programmers.level01;
 
-import java.util.*;
-
-public class Q1040_V {
+public class X_1차_다트_게임 {
 
     /***
-     * [1차] 다트 게임
+     * [1차] 다트 게임 ( 2018 KAKAO BLIND RECRUITMENT )
      *
      * ------------------------------
      * 문제 설명

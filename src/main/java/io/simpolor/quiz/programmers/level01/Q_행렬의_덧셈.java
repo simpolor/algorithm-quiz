@@ -1,9 +1,9 @@
 package io.simpolor.quiz.programmers.level01;
 
-public class Q1034 {
+public class Q_행렬의_덧셈 {
 
     /***
-     * 행렬의 덧셈
+     * 행렬의 덧셈 ( 연습문제 )
      *
      * ------------------------------
      * 문제 설명
@@ -39,6 +39,16 @@ public class Q1034 {
 
     public static class Solution {
         public String solution(String phone_number) {
+            char[] ch = phone_number.toCharArray();
+            for(int i = 0; i < ch.length - 4; i ++){
+                ch[i] = '*';
+            }
+            return String.valueOf(ch);
+        }
+    }
+
+    public static class Solution1 {
+        public String solution(String phone_number) {
 
             int length = phone_number.length();
             String firstNumber = phone_number.substring(0, length - 4);
@@ -54,15 +64,7 @@ public class Q1034 {
         }
     }
 
-    public static class Solution1 {
-        public String solution(String phone_number) {
-            char[] ch = phone_number.toCharArray();
-            for(int i = 0; i < ch.length - 4; i ++){
-                ch[i] = '*';
-            }
-            return String.valueOf(ch);
-        }
-    }
+
 
     public static class Solution2 {
         public String solution(String phone_number) {
