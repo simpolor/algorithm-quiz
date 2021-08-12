@@ -69,6 +69,50 @@ public class Q_프린터 {
     }
 
     public static class Solution {
+        /**
+         * 첫번째, 큐에 출력 값을 넣는다.
+         * 두번째, 중요도 순부터 어떻게 출력할지
+         * 세번째,
+         * @param priorities
+         * @param location
+         * @return
+         */
+        public int solution(int[] priorities, int location) {
+
+            int answer = 0;
+
+            PriorityQueue<Integer> priorityQueue = new PriorityQueue<>(Collections.reverseOrder());
+            for(int priority : priorities){
+                priorityQueue.add(priority);
+            }
+
+            // 우선 순위로 처리해둔 큐를 루프 처리
+            while (!priorityQueue.isEmpty()){
+
+                // 출력해야하는 값을 루프
+                for(int i=0; i<priorities.length; i++){
+
+                    // 우선 순위와 출력값을 비교
+                    if (priorityQueue.peek() == priorities[i]) {
+
+                        priorityQueue.poll(); // 같은 경우 큐에서 제거
+                        answer++; // 같은 경우 증가
+
+                        // 핵심 위치 값이 같은지 확인 ( location 위치를 비교하므로, 같은 숫자여도 비교가 가능 )
+                        if (location == i) {
+                            priorityQueue.clear();
+                            break;
+                        }
+                    }
+                }
+            }
+
+            return answer;
+        }
+    }
+
+
+    public static class Solution1 {
         public int solution(int[] priorities, int location) {
 
             // 순서와 중요도를 저장하는 큐를 생성
@@ -124,7 +168,7 @@ public class Q_프린터 {
     }
 
     // location을 줄이는 방법
-    public static class Solution1 {
+    public static class Solution2 {
         public int solution(int[] priorities, int location) {
             int answer = 0;
             int l = location;
@@ -158,7 +202,7 @@ public class Q_프린터 {
         }
     }
 
-    public static class Solution2 {
+    public static class Solution3 {
         public int solution(int[] priorities, int location) {
             List<Integer> list = new ArrayList<>();
             for (int priority : priorities) {
@@ -190,7 +234,7 @@ public class Q_프린터 {
     }
 
     // 멋진 코드
-    public static class Solution3 {
+    public static class Solution4 {
         public int solution(int[] priorities, int location) {
             PriorityQueue<Integer> q = new PriorityQueue<>(Collections.reverseOrder());
             for (int i : priorities) {
@@ -214,7 +258,7 @@ public class Q_프린터 {
         }
     }
 
-    public static class Solution4 {
+    public static class Solution5 {
         public int solution(int[] priorities, int location) {
             int answer = 0;
             Queue<Integer> qu = new LinkedList<Integer>();
@@ -240,7 +284,7 @@ public class Q_프린터 {
         }
     }
 
-    public static class Solution5 {
+    public static class Solution6 {
         public int solution(int[] priorities, int location) {
             int answer = 0;
 
