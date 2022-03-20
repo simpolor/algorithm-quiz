@@ -2,7 +2,7 @@ package io.simpolor.quiz.inflearn;
 
 import java.util.Scanner;
 
-public class Q_대소문자_변환 {
+public class Q2_대소문자_변환 {
 
     public static void main(String[] args) {
 

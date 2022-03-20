@@ -2,7 +2,7 @@ package io.simpolor.quiz.inflearn;
 
 import java.util.Scanner;
 
-public class Q_문장_속_단어 {
+public class Q3_문장_속_단어 {
 
     public static void main(String[] args) {
 

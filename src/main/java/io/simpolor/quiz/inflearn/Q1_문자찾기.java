@@ -2,7 +2,7 @@ package io.simpolor.quiz.inflearn;
 
 import java.util.Scanner;
 
-public class Q_문자찾기 {
+public class Q1_문자찾기 {
 
     public static void main(String[] args) {
 

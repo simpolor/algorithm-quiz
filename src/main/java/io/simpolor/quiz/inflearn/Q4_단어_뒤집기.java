@@ -3,7 +3,7 @@ package io.simpolor.quiz.inflearn;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Q_단어_뒤집기 {
+public class Q4_단어_뒤집기 {
 
     public static void main(String[] args) {
 

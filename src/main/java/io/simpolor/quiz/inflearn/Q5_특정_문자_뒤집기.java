@@ -2,7 +2,7 @@ package io.simpolor.quiz.inflearn;
 
 import java.util.Scanner;
 
-public class Q_특정_문자_뒤집기 {
+public class Q5_특정_문자_뒤집기 {
 
     public static void main(String[] args) {
 
