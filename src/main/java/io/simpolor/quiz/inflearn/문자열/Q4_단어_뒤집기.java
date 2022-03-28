@@ -1,4 +1,4 @@
-package io.simpolor.quiz.inflearn;
+package io.simpolor.quiz.inflearn.문자열;
 
 import java.util.Arrays;
 import java.util.Scanner;

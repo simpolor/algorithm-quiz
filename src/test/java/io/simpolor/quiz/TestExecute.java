@@ -9,17 +9,15 @@ public class TestExecute {
     @Test
     public void test(){
 
-        int[] truckWeights = new int[]{7,4,5,6};
-        int bridgeLength = 2;
-        int weight = 10;
+        int a = 321, c = 0, d = 0;
+        while (a != 0){
+            // System.out.println(a);
+            c = a % 10;
+            // 핵심은 처음 d가 0이기때문에 한자리로 시작
+            d = (d * 10) + c;
+            System.out.println(d);
 
-        int solution = solution(bridgeLength, weight, truckWeights);
-
-        System.out.println(solution);
-    }
-
-    public int solution(int bridge_length, int weight, int[] truck_weights) {
-        int answer = 0;
-        return answer;
+            a = a / 10;
+        }
     }
 }
