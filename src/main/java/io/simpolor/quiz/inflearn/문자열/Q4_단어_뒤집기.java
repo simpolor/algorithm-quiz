@@ -29,7 +29,7 @@ public class Q4_단어_뒤집기 {
             int lt = 0;
             int rt = chars.length - 1;
 
-            while (lt < rt) {
+            while (lt < rt) { // 절반을 스위칭
                 char tmp = chars[lt];
                 chars[lt] = chars[rt];
                 chars[rt] = tmp;
@@ -60,7 +60,7 @@ public class Q4_단어_뒤집기 {
             char[] chars = strings[i].toCharArray();
 
             int div = chars.length / 2;
-            for(int j=0; j<div; j++){
+            for(int j=0; j<div; j++){ // 수식만 다를뿐 절반을 스위칭
                 char temp = chars[j];
                 chars[j] = chars[(chars.length - 1) - j];
                 chars[(chars.length - 1) - j] = temp;
